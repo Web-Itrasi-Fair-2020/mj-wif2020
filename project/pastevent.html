@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- to add title on your website -->
+	<title>PAST EVENT | ITARSI STMKG</title>
+	<!-- to add logo on your title -->
+	<link rel="icon" href="Asset/Img/title3-img.ico">
+	<!-- to create link to bootstrap and jscript -->
+	<link rel="stylesheet" href="Asset/bootstrap/css/bootstrap.min.css">
+	<script src="Asset/jquery/popper.js"></script>
+	<script src="Asset/jquery/jquery.js"></script>
+	<script src="Asset/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans" rel="stylesheet">
+	<!-- to make fully responsive images -->
+	<style>
+        .crausel-inner img
+        {
+            width: 100%;
+            height: 100%;
+        }
+        .post
+        {
+            margin-bottom: 50px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .left-search
+        {
+            float: right;
+            margin-left: 60%;
+        }
+        .optional-shadow
+        {
+            text-shadow: 2px 2px 4px #000000;
+        }
+	    body
+        {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #EFEFEF;
+        }
+        
+        [data-theme="dark"] {
+          background-color: #1F2125;
+        }
+        
+        [data-theme="dark"] .navbar{
+          background-color: #6000AF;
+        }
+        
+        [data-theme="dark"] .navitem{
+            color: #FFFFFF;
+        }
+        
+        [data-theme="dark"] .dropdown-menu{
+            background-color: #1F2125;
+            color: white;
+            font-size: 15px;
+        }
+        
+        [data-theme="dark"] .dropdown-item{
+            color: #EFEFEF;
+        }
+        
+        [data-theme="dark"] .dropdown-item:hover {
+            background-color: #000000;
+        }
+        
+        [data-theme="dark"] .backgroundlogo{
+            background-color: #6000AF;
+        }
+        
+        [data-theme="dark"] .darklabel{
+            color: #FFFFFF;
+        }
+        
+        [data-theme="dark"] #logo{
+          background-color: #C3C7CD;
+        }
+        
+        [data-theme="dark"] #title{
+            background-color: #414141;
+        }
+        
+        [data-theme="dark"] .judul{
+            color: #E4E4F0;     
+        }
+        
+        [data-theme="dark"] .judulevent{
+            color: #97BEDB;     
+        }
+        
+        [data-theme="dark"] .backgroundlogosmall{
+            background-color: #EFEFEF;
+        }
+        
+        [data-theme="dark"] .text{
+            color: #E4E4F0;     
+        }
+        
+        #navbarCollapse{
+            position: fixed;
+            right: 100px;
+            top: 15px;
+            font-size: 15px;
+        }
+        
+        .navbar{
+            background-color: #E4EAEA;  
+            box-shadow: 1px 1px 1px 1px #000000;
+            font-family: "Google Sans";
+        }
+        
+        .navitem{
+            color: #000000;
+        }
+        
+        .darklabel{
+            color: #000000;
+        }
+        
+        .dropdown-menu{
+            background-color: #EFEFEF;
+            color: white;
+            font-size: 15px;
+        }
+
+        .dropdown-toggle,
+        .dropdown-menu {
+            border-radius: 0px !important;
+        }
+        
+        .dropdown-item:hover {
+            color: white;
+            background-color: #0B7ADD;
+        }
+        
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+        
+        #logo{
+            background-color: #E4EAEA; 
+            width: 240px;
+            height: 50px;
+            border-radius: 2%; 
+            margin-top: -5px;
+        }
+        
+        .backgroundlogo{
+            background-color: #4A4B4B;
+            position: absolute;
+            margin-left: 4px;
+            margin-top: 10px;
+            border-radius: 50%;
+            width: 17px;
+            height: 17px;
+        }
+        
+        #title{
+            position: relative;
+            width: 1366px;
+            height: 60px;
+            margin-top: 75px;
+            background-color: #D1D1D1;
+        }
+        
+        .judul{
+            text-align: center;
+            color: #000000;
+            position: relative;
+            top: 7px;
+        }
+        
+        .image{
+            position: relative; 
+            height: 250px; 
+            width: 250px; 
+            top: 0px;
+            margin-top: 40px;
+            margin-left: 300px;
+            margin-bottom: -100px;
+        }
+        
+        .judulevent{
+            position: relative;
+            top: -40px;
+            margin-top: 0px;
+            margin-left: 30px;
+            text-align: right;
+            color: #000000;
+            font-size: 20px;
+        }
+        
+        .tanggalevent{
+            position: relative; 
+            top: -120px;
+            margin-top: -14px;
+            margin-left: 610px;
+            font-size: 13px; 
+        }
+        
+        .backgroundtanggal{
+            position: relative;
+            top: -84px;
+            left: -3px;
+            height: 19px;
+            width: 19px;
+            border-radius: 50%;
+            margin-top: -20px;
+            margin-left: 590px;
+        }
+        
+        .logotanggal{
+            position: relative;
+            top: -120px;
+            height: 13px;
+            margin-top: 20px;
+            margin-left: 590px;
+        }
+        
+        .itarsievent{
+            position: relative;
+            top: -118px;
+            left: 20px;
+            margin-top: -48px;
+            margin-left: 750px;
+            font-size: 13px; 
+        }
+        
+        .backgrounditarsi{
+            position: relative;
+            top: -125px;
+            left: 157px;
+            height: 19px;
+            width: 19px;
+            border-radius: 50%;
+            margin-top: -20px;
+            margin-left: 590px;
+        }
+        
+        .logoitarsi{
+            position: relative;
+            top: -119px;
+            left: 40px;
+            height: 13px;
+            margin-top: -60px;
+            margin-left: 710px;
+        }
+        
+        .commentevent{
+            position: relative; 
+            top: -107px;
+            left: 40px;
+            margin-top: -57px;
+            margin-left: 810px;
+            font-size: 13px; 
+        }
+        
+        .backgroundcomment{
+            position: relative;
+            top: -123px;
+            left: 237px;
+            height: 19px;
+            width: 19px;
+            border-radius: 50%;
+            margin-top: -20px;
+            margin-left: 590px;
+        }
+        
+        .logocomment{
+            position: relative;
+            top: -107px;
+            left: 40px;
+            height: 13px;
+            margin-top: -75px;
+            margin-left: 790px;
+        }
+        
+        .backgroundlogosmall{
+            background-color: #EFEFEF;
+        }
+        
+        .text-justify{
+            position: relative; 
+            top: -100px;
+            margin-top: 0px;
+            margin-left: 589px;
+            margin-right: 300px;
+        }
+        
+        .text{
+            color: #000000;
+        }
+        
+    </style>
+</head>
+    <body>
+	<!-- header begin -->
+	<header>
+		<nav class="navbar navbar-expand-md fixed-top" id="header">
+			<!-- icon header -->
+			<a href="index.html" class="navbar-brand">
+                <div id="logo">
+                    <img src="Asset/img/header-img.png" alt="logo" style="height: 43px; left: : 100px; margin-left: 10px; margin-top: 3px;">
+                </div> 
+				
+                
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- menu begin -->
+			<div class="dropdown" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+                        <div class="backgroundlogo"></div>
+						<a href="index.html" class="nav-link navitem" style="position: inherit;">
+							<img src="Asset/Img/home.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Home
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+                        <div class="backgroundlogo"></div>
+                        <a class="nav-link navitem dropdown-toggle" href="profil.html" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+                            <img src="Asset/Img/user.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Profil
+                        </a><span class="caret"></span>
+                        <ul class="dropdown-menu" id="dropdownprofil" aria-labelledby="dropdownMenuButton" style="margin-left: 0px;">
+                            <li><a class="dropdown-item" href="profil.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="filosofi%20logo.html">Filosofi Logo</a></li>
+                            <li><a class="dropdown-item" href="struktur-organisasi.html">Struktur Organisasi</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="backgroundlogo"></div>
+						<a class="nav-link navitem dropdown-toggle" href="profil.html" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+				            <img src="Asset/Img/calendar.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Agenda
+						</a><span class="caret"></span>
+                        <ul class="dropdown-menu" id="dropdownagenda" aria-labelledby="dropdownMenuButton" style="margin-left: 0px;">
+                            <li><a class="dropdown-item" href="mainevent.html">Main Event</a></li>
+                            <li><a class="dropdown-item" href="pastevent.html">Past Event</a></li>
+                            <li><a class="dropdown-item" href="#">Open Discussion</a>
+                            </li>
+                        </ul>
+                        
+					</li>
+                    <li class="nav-item">
+                        <div class="backgroundlogo"></div>
+						<a href="tutorial.html" class="nav-link navitem">
+				            <img src="Asset/Img/cpu.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Tutorial
+						</a>
+					</li>
+					<li class="nav-item">
+                        <div class="backgroundlogo"></div>
+						<a href="contact.html" class="nav-link navitem">
+				            <img src="Asset/Img/phone.svg" style="width: 15px; position: relative; left: -4px; top: -2px;">Contact
+						</a>
+					</li>
+				</ul>
+                
+                <div class="nav-link" style="position: absolute; margin-left: 405px;">
+
+                  <div class="custom-control custom-switch" style="top: -38px;">
+                    <input type="checkbox" class="custom-control-input" id="darkSwitch">
+                    <label class="custom-control-label darklabel" style="font-family: Google Sans;" for="darkSwitch">Dark</label>
+                  </div>
+
+                  <script src="Asset/Bootstrap/js/dark-mode-switch.min.js"></script>
+
+                </div>
+				<!-- menu end -->
+				<!-- search bar begin -->
+			     
+            </div>
+		</nav>
+	</header>
+    
+    <div id="title">
+        <h1 class="judul">PAST EVENT</h1>
+    </div>
+    
+    <div class="container-fluid row" style="margin: 10px 0 30px">
+        <div id="event1">
+            <img src="Asset/Img/slider1-img.jpeg" class="image">
+            <a class="judulevent" href="#"><b>ITARSI FAIR 2018</b></a>
+            <div class="tanggal">
+                <div class="backgroundtanggal backgroundlogosmall"></div>
+                <img class="logotanggal" src="Asset/Img/clock.svg">
+                <h6 class="tanggalevent text">September 17, 2018</h6>
+            </div>
+            <div class="itarsi">
+                <div class="backgrounditarsi backgroundlogosmall"></div>
+                <img class="logoitarsi" src="Asset/Img/userblack.svg">
+                <h6 class="itarsievent text">ITARSI</h6>
+            </div>
+            <div class="comment">
+                <div class="backgroundcomment backgroundlogosmall"></div>
+                <img class="logocomment" src="Asset/Img/message-square.svg">
+                <h6 class="commentevent text">Leave a Comment</h6>
+            </div>
+            <p class="text-justify text">
+                Untuk Apa ITARSI Fair Diadakan? Teknologi terus menerus berkembang seiring berjalannya waktu. Internet of Things (IoT), Big Data, dan Artificial […]
+            </p>
+        </div>
+        
+        <div id="event2">
+            <img src="Asset/Img/slider2-img.jpeg" class="image">
+            <a class="judulevent" href="#"><b>Kemenangan Manis pada Lomba KTI Universitas Bangka Belitung</b></a>
+            <div class="tanggal">
+                <div class="backgroundtanggal backgroundlogosmall"></div>
+                <img class="logotanggal" src="Asset/Img/clock.svg">
+                <h6 class="tanggalevent text">Desember 12, 2017</h6>
+            </div>
+            <div class="itarsi">
+                <div class="backgrounditarsi backgroundlogosmall"></div>
+                <img class="logoitarsi" src="Asset/Img/userblack.svg">
+                <h6 class="itarsievent text">ITARSI</h6>
+            </div>
+            <div class="comment">
+                <div class="backgroundcomment backgroundlogosmall"></div>
+                <img class="logocomment" src="Asset/Img/message-square.svg">
+                <h6 class="commentevent text">Leave a Comment</h6>
+            </div>
+            <p class="text-justify text">
+                Taruna Bima beserta 2 orang taruna lainnya merupakan perwakilan Kontingen STMKG dalam lomba karya tulis ilmiah tingkat nasional yang diselenggarakan […]
+            </p>
+        </div>
+        
+        <div id="event2">
+            <img src="Asset/Img/slider3-img.jpg" class="image">
+            <a class="judulevent" href="#"><b>Partisipasi Taruna Instrumentasi Dalam KOMURINDO KOMBAT</b></a>
+            <div class="tanggal">
+                <div class="backgroundtanggal backgroundlogosmall"></div>
+                <img class="logotanggal" src="Asset/Img/clock.svg">
+                <h6 class="tanggalevent text">September 17, 2018</h6>
+            </div>
+            <div class="itarsi">
+                <div class="backgrounditarsi backgroundlogosmall"></div>
+                <img class="logoitarsi" src="Asset/Img/userblack.svg">
+                <h6 class="itarsievent text">ITARSI</h6>
+            </div>
+            <div class="comment">
+                <div class="backgroundcomment backgroundlogosmall"></div>
+                <img class="logocomment" src="Asset/Img/message-square.svg">
+                <h6 class="commentevent text">Leave a Comment</h6>
+            </div>
+            <p class="text-justify text">
+                Kompetisi Muatan Roket Indonesia (KOMURINDO) dan Kompetisi Muatan Balon Atmosfer (KOMBAT) merupakan kompetisi tahunan yang diselenggarakan oleh LAPAN sejak taun […]
+            </p>
+        </div>
+    </div>
+        
+    <br><br><br><br><br><br>
+	<!-- footer start -->
+	<footer class="page-footer text-white" style="padding-top: 20px;  background-color: #000000">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<a href="https://www.instagram.com/itarsi.stmkg/">
+					<img src="Asset/img/instagram.png" alt="instagram" class="float-right" width="40px">
+				</a>
+			</div>
+			<div class="col">
+				<a href="https://mail.google.com/mail/u/0/#inbox?compose=VpCqJKjfdQFhXcFCmDQrbNklCgvxmTnSkbNpxXDDCRQkMHdJtPnChprMhMnTCJKgWltvXlG">
+					<img src="Asset/img/email.png" alt="Email" class="float-left" width="40px">
+				</a>
+			</div>
+		</div>
+	</div> 
+		<div class="footer-copyright text-center py-3"> 
+			Copyright &copy; ITARSI FAIR 2020 (MJ INSTRUMENTASI 6A)
+		</div>
+	</footer>
+	<!-- footer end -->
+</body>
+</html>

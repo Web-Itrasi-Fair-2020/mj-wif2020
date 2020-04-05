@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- to add title on your website -->
+	<title>CONTACT | ITARSI STMKG</title>
+	<!-- to add logo on your title -->
+	<link rel="icon" href="Asset/Img/title3-img.ico">
+	<!-- to create link to bootstrap and jscript -->
+	<link rel="stylesheet" href="Asset/bootstrap/css/bootstrap.min.css">
+	<script src="Asset/jquery/popper.js"></script>
+	<script src="Asset/jquery/jquery.js"></script>
+	<script src="Asset/bootstrap/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="stylesheets/slide-in.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans" rel="stylesheet">
+	<!-- to make fully responsive images -->
+	<style>
+        
+        body
+        {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #EFEFEF;
+        }
+        
+        [data-theme="dark"] {
+          background-color: #1F2125;
+        }
+        
+        [data-theme="dark"] .navbar{
+          background-color: #6000AF;
+        }
+        
+        [data-theme="dark"] .navitem{
+            color: #FFFFFF;
+        }
+        
+        [data-theme="dark"] .dropdown-menu{
+            background-color: #1F2125;
+            color: white;
+            font-size: 15px;
+        }
+        
+        [data-theme="dark"] .dropdown-item{
+            color: #EFEFEF;
+        }
+        
+        [data-theme="dark"] .dropdown-item:hover {
+            background-color: #000000;
+        }
+        
+        [data-theme="dark"] .darklabel{
+            color: #FFFFFF;
+        }
+        
+        [data-theme="dark"] #logo{
+          background-color: #C3C7CD;
+        }
+        
+        [data-theme="dark"] .backgroundlogo{
+            background-color: #6000AF;
+        }
+        
+        [data-theme="dark"] .form-group{
+            color: #E4E4F0;
+        }
+        
+        [data-theme="dark"] .card{
+            background-color: #1F2125;
+            color: #E4E4F0;
+            border-color: #A1A1A1;
+        }
+        
+        [data-theme="dark"] ::placeholder{
+            color: #A1A1A1;
+        }
+        
+        [data-theme="dark"] input{
+            background-color: #1F2125;
+            border-color: #A1A1A1;
+            color: #E4E4F0;
+        }
+        
+        [data-theme="dark"] textarea{
+            background-color: #1F2125;
+            border-color: #A1A1A1;
+            color: #E4E4F0;
+        }
+        
+        [data-theme="dark"] .send-button{
+            background-color: #151515;
+            border-color: #A1A1A1;
+            color: #E4E4F0;
+        }
+        
+        #navbarCollapse{
+            position: fixed;
+            right: 100px;
+            top: 15px;
+            font-size: 15px;
+        }
+        
+        .navbar{
+            background-color: #E4EAEA;  
+            box-shadow: 1px 1px 1px 1px #000000;
+            font-family: "Google Sans";
+        }
+        
+        .navitem{
+            color: #000000;
+        }
+        
+        #dark-mode{
+            top: -38px; 
+        }
+        
+        .darklabel{
+            color: #000000;
+        }
+        
+        .dropdown-menu{
+            background-color: #EFEFEF;
+            color: white;
+            font-size: 15px;
+        }
+
+        .dropdown-toggle,
+        .dropdown-menu {
+            border-radius: 0px !important;
+        }
+        
+        .dropdown-item:hover {
+            color: white;
+            background-color: #0B7ADD;
+        }
+        
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+        
+        .logo{
+            background-color: #E4EAEA; 
+            width: 240px;
+            height: 50px;
+            border-radius: 2%; 
+            margin-top: -5px;
+        }
+        
+        .header-logo{
+            width: 15px; 
+            position: relative; 
+            left: -3px; 
+            top: -2px;
+        }
+        
+        .logo-img{
+            height: 43px;
+        }
+        
+        .backgroundlogo{
+            background-color: #4A4B4B;
+            position: absolute;
+            margin-left: 4px;
+            margin-top: 10px;
+            border-radius: 50%;
+            width: 17px;
+            height: 17px;
+        }
+        
+        input{
+            border-style: solid;
+            border-radius: 10px;
+            border-color: #EBE8E8;
+        }
+        
+        textarea{
+            border-style: solid;
+            border-radius: 10px;
+            border-width: 2px;
+            border-color: #EBE8E8;
+        }
+        
+        .send-button{
+            width: 90px;
+            position: relative;
+            left: 1030px;
+            margin-bottom: 50px;
+        }
+        
+        @media only screen and (max-width: 608px){
+            
+            .logo{
+                position: absolute;
+                top: 10px;
+                left: 200px;
+                width: 170px;
+                height: 40px;
+            }
+            
+            .logo-img{
+                position: absolute;
+                left: 0px;
+                top: 2px;
+                height: 30px;
+            }
+            
+            .backgroundlogo{
+                margin-left: -4px;
+                
+            }
+            
+            #header{
+                height: 90px;
+            }
+            
+            #home{
+                position: fixed;
+                left: 30px;
+                top: 50px;
+            }
+            
+            #profil{
+                position: fixed;
+                left: 110px;
+                top: 50px;
+            }
+            
+            #agenda{
+                position: fixed;
+                left: 200px;
+                top: 50px;
+            }
+            
+            #tutorial{
+                position: fixed;
+                left: 310px;
+                top: 50px;
+            }
+            
+            #contact{
+                position: fixed;
+                left: 400px;
+                top: 50px;
+            }
+            
+            #dark-mode{
+                position: fixed;
+                left: 490px;
+                top: 57px;
+            }
+            
+            .send-button{
+                left: 435px;
+            }
+        } 
+        
+	</style>
+</head>
+<body>
+	<!-- header begin -->
+	<header>
+		<nav class="navbar navbar-expand-md fixed-top" id="header">
+			<!-- icon header -->
+			<a href="index.html" class="navbar-brand">
+                <div class="logo">
+                    <img class="logo-img" src="Asset/img/header-img.png" alt="logo" style="left: : 100px; margin-left: 10px; margin-top: 3px;">
+                </div> 
+				
+                
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- menu begin -->
+			<div class="dropdown" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active" id="home">
+                        <div class="backgroundlogo"></div>
+						<a href="index.html" class="nav-link navitem" style="position: inherit;">
+							<img class="header-logo" src="Asset/Img/home.svg" >Home
+						</a>
+					</li>
+					<li class="nav-item dropdown" id="profil">
+                        <div class="backgroundlogo"></div>
+                        <a class="nav-link navitem dropdown-toggle" href="profil.html" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+                            <img class="header-logo" src="Asset/Img/user.svg">Profil
+                        </a><span class="caret"></span>
+                        <ul class="dropdown-menu" id="dropdownprofil" aria-labelledby="dropdownMenuButton" style="margin-left: 0px;">
+                            <li><a class="dropdown-item" href="profil.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="filosofi%20logo.html">Filosofi Logo</a></li>
+                            <li><a class="dropdown-item" href="struktur-organisasi.html">Struktur Organisasi</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown" id="agenda">
+                        <div class="backgroundlogo"></div>
+						<a class="nav-link navitem dropdown-toggle" href="profil.html" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+				            <img class="header-logo" src="Asset/Img/calendar.svg">Agenda
+						</a><span class="caret"></span>
+                        <ul class="dropdown-menu" id="dropdownagenda" aria-labelledby="dropdownMenuButton" style="margin-left: 0px;">
+                            <li><a class="dropdown-item" href="mainevent.html">Main Event</a></li>
+                            <li><a class="dropdown-item" href="pastevent.html">Past Event</a></li>
+                            <li><a class="dropdown-item" href="#">Open Discussion</a>
+                            </li>
+                        </ul>
+                        
+					</li>
+                    <li class="nav-item" id="tutorial">
+                        <div class="backgroundlogo"></div>
+						<a href="tutorial.html" class="nav-link navitem">
+				            <img class="header-logo" src="Asset/Img/cpu.svg" >Tutorial
+						</a>
+					</li>
+					<li class="nav-item" id="contact">
+                        <div class="backgroundlogo"></div>
+						<a href="contact.html" class="nav-link navitem">
+				            <img class="header-logo" src="Asset/Img/phone.svg">Contact
+						</a>
+					</li>
+				</ul>
+                
+                <div class="nav-link" style="position: absolute; margin-left: 405px;">
+
+                  <div class="custom-control custom-switch" id="dark-mode">
+                    <input type="checkbox" class="custom-control-input" id="darkSwitch">
+                    <label class="custom-control-label darklabel" style="font-family: Google Sans;" for="darkSwitch">Dark</label>
+                  </div>
+
+                  <script src="Asset/Bootstrap/js/dark-mode-switch.min.js"></script>
+
+                </div>
+				<!-- menu end -->
+				<!-- search bar begin -->
+			     
+            </div>
+		</nav>
+	</header>
+	<!-- header end -->
+	
+	<!-- main body -->
+	<div class="container-fluid" style="margin: 90px 0 30px">
+			<div class="container">
+				<!-- build critical and suggestion -->
+				<h3 class="text-center text-info">Kritik dan Saran</h3>
+				<div class="form-group row">
+					<label for="example1" class="col-sm-2 col-form-label font-weight-bold">Your Name</label>
+					<input type="text" class="col-sm-10" id="example1" placeholder="your full name">
+				</div>
+				<div class="form-group row">
+					<label for="example2" class="col-sm-2 col-form-label font-weight-bold">Your Email</label>
+					<input type="email" class="col-sm-10" id="example2" placeholder="example@domain.com">
+				</div>
+				<div class="form-group row">
+					<label for="example3" class="col-sm-2 col-form-label font-weight-bold">Kritik Dan Saran</label>
+					<textarea id="example3" cols="30" rows="10" class="col-sm-10" placeholder="your aspiration"></textarea>
+				</div>
+                <div class="button">
+                    <button class="send-button">Kirim</button>
+                </div>
+				<!-- build address and contact -->
+				<h3 class="text-center text-info">Alamat dan Kontak</h3>
+				<div class="form-group row">
+					<label for="example4" class="col-sm-2 col-form-label font-weight-bold">
+						Alamat
+					</label>
+					<label for="example4" class="col-sm-10 col-form-label text-justify">
+					<i class="fas fa-location-arrow text-info"></i>
+						Jl. Perhubungan I No. 5, Pondok Betung, Pondok Aren, Pd. Betung, Tangerang Selatan, Kota Tangerang Selatan, Banten 15221
+					</label>
+				</div>
+				<div class="form-group row">
+					<label for="example4" class="col-sm-2 col-form-label font-weight-bold">
+						Whatsapp
+					</label>
+					<label for="example4" class="col-sm-10 col-form-label text-justify">
+						<i class="fab fa-whatsapp text-info"></i>
+						081218293019 (Yulieta)
+					</label>
+				</div>
+				<div class="form-group row">
+					<label for="example4" class="col-sm-2 col-form-label font-weight-bold">
+						Email 1
+					</label>
+					<label for="example4" class="col-sm-10 col-form-label text-justify">
+						<i class="fas fa-envelope text-info"></i>
+						 itarsi@stmkg.ac.id
+					</label>
+				</div>
+				<div class="form-group row">
+					<label for="example4" class="col-sm-2 col-form-label font-weight-bold">
+						Email 2
+					</label>
+					<label for="example4" class="col-sm-10 col-form-label text-justify">
+						<i class="fas fa-envelope text-info"></i>
+						 itarsi.stmkg@gmail.com
+					</label>
+				</div>
+				<div class="form-group row">
+					<label for="example4" class="col-sm-2 col-form-label font-weight-bold">
+						Instagram
+					</label>
+					<label for="example4" class="col-sm-10 col-form-label text-justify">
+						<i class="fab fa-instagram text-info"></i>
+						 itarsi.stmkg
+					</label>
+				</div>
+				<!-- build maps on html -->
+				<div class="card">
+					<div class="card-body">
+						<div class="card-title font-weight-bold text-center">Peta STMKG</div>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.991637035898!2d106.74683447971974!3d-6.26482916310003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f05e4e6d1c27%3A0x8f19299fa86d971f!2sSekolah%20Tinggi%20Meteorologi%20Klimatologi%20dan%20Geofisika%20(STMKG)!5e0!3m2!1sid!2sid!4v1580486008818!5m2!1sid!2sid" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<!-- footer start -->
+	<footer class="page-footer text-white" style="padding-top: 20px;  background-color: #000000">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<a href="https://www.instagram.com/itarsi.stmkg/">
+					<img src="Asset/img/instagram.png" alt="instagram" class="float-right" width="40px">
+				</a>
+			</div>
+			<div class="col">
+				<a href="https://mail.google.com/mail/u/0/#inbox?compose=VpCqJKjfdQFhXcFCmDQrbNklCgvxmTnSkbNpxXDDCRQkMHdJtPnChprMhMnTCJKgWltvXlG">
+					<img src="Asset/img/email.png" alt="Email" class="float-left" width="40px">
+				</a>
+			</div>
+		</div>
+	</div> 
+		<div class="footer-copyright text-center py-3"> 
+			Copyright &copy; ITARSI FAIR 2020 (MJ INSTRUMENTASI 6A)
+		</div>
+	</footer>
+	<!-- footer end -->
+</body>
+</html>

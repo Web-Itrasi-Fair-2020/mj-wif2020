@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- to add title on your website -->
+	<title>TUTORIAL | ITARSI STMKG</title>
+	<!-- to add logo on your title -->
+	<link rel="icon" href="Asset/Img/title3-img.ico">
+	<!-- to create link to bootstrap and jscript -->
+	<link rel="stylesheet" href="Asset/bootstrap/css/bootstrap.min.css">
+	<script src="Asset/jquery/popper.js"></script>
+	<script src="Asset/jquery/jquery.js"></script>
+	<script src="Asset/bootstrap/js/bootstrap.min.js"></script>
+    <link href="stylesheets/slide-in.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <style> 
+        
+        .inline-photo {
+          opacity: 0;
+          -webkit-transform: translateY(4em) rotateZ(0deg);
+                  transform: translateY(4em) rotateZ(0deg);
+          -webkit-transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out;
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          width: 90%;
+
+          will-change: transform, opacity;
+        }
+        
+        .inline-photo-down {
+          opacity: 0;
+          -webkit-transform: translateY(-4em) rotateZ(0deg);
+                  transform: translateY(-4em) rotateZ(0deg);
+          -webkit-transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out;
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          width: 90%;
+
+          will-change: transform, opacity;
+        }
+
+        .inline-photo-right {
+          opacity: 0;
+          -webkit-transform: translateX(-4em) rotateZ(0deg);
+                  transform: translateX(-4em) rotateZ(0deg);
+          -webkit-transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out;
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          width: 90%;
+
+          will-change: transform, opacity;
+        }
+
+        .inline-photo-left {
+          opacity: 0;
+          -webkit-transform: translateX(4em) rotateZ(0deg);
+                  transform: translateX(4em) rotateZ(0deg);
+          -webkit-transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out;
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          width: 90%;
+
+          will-change: transform, opacity;
+        }
+        
+        .inline-photo.is-visible {
+          opacity: 1;
+          -webkit-transform: rotateZ(0deg);
+                  transform: rotateZ(0deg);
+        }
+        
+        .inline-photo-down.is-visible {
+          opacity: 1;
+          -webkit-transform: rotateZ(0deg);
+                  transform: rotateZ(0deg);
+        }
+        
+        .inline-photo-right.is-visible {
+          opacity: 1;
+          -webkit-transform: rotateZ(0deg);
+                  transform: rotateZ(0deg);
+        }
+        
+        .inline-photo-left.is-visible {
+          opacity: 1;
+          -webkit-transform: rotateZ(0deg);
+                  transform: rotateZ(0deg);
+        }
+        
+	    body
+        {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #EFEFEF;
+        }
+        
+        [data-theme="dark"] {
+          background-color: #1F2125;
+        }
+        
+        [data-theme="dark"] .navbar{
+          background-color: #6000AF;
+        }
+        
+        [data-theme="dark"] .navitem{
+            color: #FFFFFF;
+        }
+        
+        [data-theme="dark"] .dropdown-menu{
+            background-color: #1F2125;
+            color: white;
+            font-size: 15px;
+        }
+        
+        [data-theme="dark"] .dropdown-item{
+            color: #EFEFEF;
+        }
+        
+        [data-theme="dark"] .dropdown-item:hover {
+            background-color: #000000;
+        }
+        
+        [data-theme="dark"] .backgroundlogo{
+            background-color: #6000AF;
+        }
+        
+        [data-theme="dark"] .darklabel{
+            color: #FFFFFF;
+        }
+        
+        [data-theme="dark"] #title{
+            background-color: #414141;
+        }
+        
+        [data-theme="dark"] .judul{
+            color: #E4E4F0;     
+        }
+        
+        [data-theme="dark"] .content-title{
+            background-color: #333333;
+            border-color: #EFEFEF;
+            box-shadow: 2px 2px 2px 2px #0F0F0F; 
+            
+        }
+        
+        [data-theme="dark"] .content-text{
+            color: #E4E4F0;     
+        }
+        
+        #navbarCollapse{
+            position: fixed;
+            right: 100px;
+            top: 15px;
+            font-size: 15px;
+        }
+        
+        .navbar{
+            background-color: #E4EAEA;  
+            box-shadow: 1px 1px 1px 1px #000000;
+            font-family: "Google Sans";
+        }
+        
+        .navitem{
+            color: #000000;
+        }
+        
+        .darklabel{
+            color: #000000;
+        }
+        
+        .dropdown-menu{
+            background-color: #EFEFEF;
+            color: white;
+            font-size: 15px;
+        }
+
+        .dropdown-toggle,
+        .dropdown-menu {
+            border-radius: 0px !important;
+        }
+        
+        .dropdown-item:hover {
+            color: white;
+            background-color: #0B7ADD;
+        }
+        
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+        
+        #logo{
+            background-color: #E4EAEA; 
+            width: 240px;
+            height: 50px;
+            border-radius: 2%; 
+            margin-top: -5px;
+        }
+        
+        .backgroundlogo{
+            background-color: #4A4B4B;
+            position: absolute;
+            margin-left: 4px;
+            margin-top: 10px;
+            border-radius: 50%;
+            width: 17px;
+            height: 17px;
+        }
+        
+        #title{
+            position: relative;
+            width: 1366px;
+            height: 60px;
+            margin-top: 75px;
+            background-color: #D1D1D1;
+        }
+        
+        .judul{
+            text-align: center;
+            color: #000000;
+            position: relative;
+            top: 7px;
+        }
+        
+        .content-title{
+            width: 300px;
+            height: 280px;
+            margin-top: 30px;
+            background-color: #EFEFEF;
+            border-radius: 5%;
+            border-style: none;
+            border-width: 3px;
+            border-color: #EFEFEF;
+            box-shadow: 2px 2px 2px 2px #545454;   
+        }
+        
+        .content-logo{
+            position: relative;
+            height: 150px;
+            left: 80px;
+            margin-top: 20px;
+        }
+        
+        .content-text{
+            position: relative;
+            text-align: center;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 10px;
+            color: #000000;
+            font-size: 15px;
+        }
+        
+        .c-plus-plus{
+            position: absolute;
+            left: 150px;
+        }
+        
+        .python{
+            position: absolute;
+            left: 525px;
+        }
+        
+        .content-logo-prolog{
+            position: relative;
+            height: 150px;
+            left: 65px;
+            margin-top: 20px;
+        }
+        
+        .prolog{
+            position: absolute;
+            left: 900px;
+        }
+        
+        .html{
+            position: absolute;
+            top: 500px;
+            left: 150px;
+        }
+        
+        .content-logo-css{
+            position: relative;
+            height: 150px;
+            left: 95px;
+            margin-top: 20px;
+        }
+        
+        .css{
+            position: absolute;
+            top: 500px;
+            left: 525px;
+        }
+        
+        .javascript{
+            position: absolute;
+            top: 500px;
+            left: 900px;
+        }
+        
+        .content-logo-php{
+            position: relative;
+            height: 90px;
+            left: 70px;
+            margin-top: 50px;
+        }
+        
+        .php{
+            position: absolute;
+            top: 850px;
+            left: 150px;
+        }
+        
+        .content-logo-mysql{
+            position: relative;
+            height: 90px;
+            left: 70px;
+            margin-top: 50px;
+        }
+        
+        .mysql{
+            position: absolute;
+            top: 850px;
+            left: 525px;
+        }
+        
+        .content-logo-django{
+            position: relative;
+            height: 90px;
+            left: 50px;
+            margin-top: 50px;
+        }
+        
+        .django{
+            position: absolute;
+            top: 850px;
+            left: 900px;
+        }
+        
+        .arduino{
+            position: absolute;
+            top: 1200px;
+            left: 150px;
+        }
+        
+        .content-logo-matlab{
+            position: relative;
+            height: 150px;
+            left: 65px;
+            margin-top: 20px;   
+        }
+        
+        .matlab{
+            position: absolute;
+            top: 1200px;
+            left: 525px;
+        }
+        
+        .cvavr{
+            position: absolute;
+            top: 1200px;
+            left: 900px;
+        }
+        
+        
+        </style>
+</head>
+<body>
+	<!-- header begin -->
+	<header>
+		<nav class="navbar navbar-expand-md fixed-top" id="header">
+			<!-- icon header -->
+			<a href="index.html" class="navbar-brand">
+                <div id="logo">
+                    <img src="Asset/img/header-img.png" alt="logo" style="height: 43px; left: : 100px; margin-left: 10px; margin-top: 3px;">
+                </div> 
+				
+                
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- menu begin -->
+			<div class="dropdown" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+                        <div class="backgroundlogo"></div>
+						<a href="index.html" class="nav-link navitem" style="position: inherit;">
+							<img src="Asset/Img/home.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Home
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+                        <div class="backgroundlogo"></div>
+                        <a class="nav-link navitem dropdown-toggle" href="profil.html" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+                            <img src="Asset/Img/user.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Profil
+                        </a><span class="caret"></span>
+                        <ul class="dropdown-menu" id="dropdownprofil" aria-labelledby="dropdownMenuButton" style="margin-left: 0px;">
+                            <li><a class="dropdown-item" href="profil.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="filosofi%20logo.html">Filosofi Logo</a></li>
+                            <li><a class="dropdown-item" href="struktur-organisasi.html">Struktur Organisasi</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="backgroundlogo"></div>
+						<a class="nav-link navitem dropdown-toggle" href="profil.html" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+				            <img src="Asset/Img/calendar.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Agenda
+						</a><span class="caret"></span>
+                        <ul class="dropdown-menu" id="dropdownagenda" aria-labelledby="dropdownMenuButton" style="margin-left: 0px;">
+                            <li><a class="dropdown-item" href="mainevent.html">Main Event</a></li>
+                            <li><a class="dropdown-item" href="pastevent.html">Past Event</a></li>
+                            <li><a class="dropdown-item" href="#">Open Discussion</a>
+                            </li>
+                        </ul>
+                        
+					</li>
+                    <li class="nav-item">
+                        <div class="backgroundlogo"></div>
+						<a href="tutorial.html" class="nav-link navitem">
+				            <img src="Asset/Img/cpu.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Tutorial
+						</a>
+					</li>
+					<li class="nav-item">
+                        <div class="backgroundlogo"></div>
+						<a href="contact.html" class="nav-link navitem">
+				            <img src="Asset/Img/phone.svg" style="width: 15px; position: relative; left: -4px; top: -2px;">Contact
+						</a>
+					</li>
+				</ul>
+                
+                <div class="nav-link" style="position: absolute; margin-left: 405px;">
+
+                  <div class="custom-control custom-switch" style="top: -38px;">
+                    <input type="checkbox" class="custom-control-input" id="darkSwitch">
+                    <label class="custom-control-label darklabel" style="font-family: Google Sans;" for="darkSwitch">Dark</label>
+                  </div>
+
+                  <script src="Asset/Bootstrap/js/dark-mode-switch.min.js"></script>
+
+                </div>
+				<!-- menu end -->
+				<!-- search bar begin -->
+			     
+            </div>
+		</nav>
+	</header>
+	<!-- header end -->
+    <div id="title">
+        <h1 class="judul">TUTORIAL</h1>
+	</div>
+    
+    <div class="container" style="margin: 30px 0 30px">
+        <div class="content">
+            
+            <div class="content-title c-plus-plus">
+                <img class="content-logo" src="Asset/Img/C++.png">
+                <a class="content-text" href="https://www.youtube.com/watch?v=WtBF_-pLrjE&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI">
+                    <p class="content-text">Bahasa pemrograman C++ dapat digunakan untuk mengembangkan perangkat lunak atau sofware</p>
+                </a>
+            </div>
+            
+            <div class="content-title python">
+                <img class="content-logo" src="Asset/Img/Python.png">
+                <a class="content-text" href="https://www.youtube.com/watch?v=SsUF-7X3ehM&list=PLZS-MHyEIRo7cgStrKAMhgnOT66z2qKz1">
+                    <p class="content-text">Bahasa pemrograman Python dapat digunakan untuk aplikasi, CLI, IoT, Web, Game, dan lainya</p>
+                </a>
+            </div>
+            
+            <div class="content-title prolog">
+                <img class="content-logo-prolog" src="Asset/Img/Prolog.png">
+                <a class="content-text" href="https://www.youtube.com/watch?v=SykxWpFwMGs&t=1s">
+                    <p class="content-text">Prolog biasa digunakan untuk sistem pakar, Natural Language Processing, dan Robotik</p>
+                </a>
+            </div>
+            
+            <div class="content-title html">
+                <img class="content-logo" src="Asset/Img/HTML.png">
+                <a class="content-text" href="https://www.youtube.com/watch?v=kr4882GSwpA&list=PLCZlgfAG0GXC9ojTmU95BRefbJoi4clY-">
+                    <p class="content-text">HTML adalah bahasa yang digunakan untuk struktur dasar website</p>
+                </a>
+            </div>
+            
+            <div class="content-title css">
+                <img class="content-logo-css" src="Asset/Img/CSS.png">
+                <a class="content-text" href="https://www.youtube.com/watch?v=Y7zn7zhAIi8&list=PLCZlgfAG0GXAcU8NqgbY065mo9Sho-5Tc">
+                    <p class="content-text">CSS merupakan kode yang digunakan untuk mendesain website dari file HTML</p>
+                </a>
+            </div>
+            
+            <div class="content-title javascript">
+                <img class="content-logo" src="Asset/Img/JavaScript.png">
+                <a class="content-text" href="https://www.youtube.com/watch?v=ttYTx_wGcQY&list=PLCZlgfAG0GXAiH1acKFPx8EtpJAq44gjP">
+                    <p class="content-text">JavaScript merupakan bahasa yang digunakan front end agar interaktif</p>
+                </a>
+            </div>
+            
+            <div class="content-title php">
+                <img class="content-logo-php" src="Asset/Img/php.png">
+                <a class="content-text" href="https://www.youtube.com/watch?v=JEvlT5du2Ec&list=PLCZlgfAG0GXADD_i0xL_Dkv4zT_vFmdnS">
+                    <p class="content-text">PHP digunakan untuk mengembangkan aplikasi berbasis web yang cukup kompleks, handal, dan cepat</p>
+                </a>
+            </div>
+            
+            <div class="content-title mysql">
+                <img class="content-logo-mysql" src="Asset/Img/MySQL.png">
+                <a class="content-text" href="https://www.youtube.com/watch?v=vFpWrj34Vog&list=PLCZlgfAG0GXAQPgBd7tNutH1D1QRgklW2">
+                    <p class="content-text">MySQL merupakan sebuah perangkat lunak sistem manajemen basis data SQL yang bersifat open source</p>
+                </a>
+            </div>
+            
+            <div class="content-title django">
+                <img class="content-logo-django" src="Asset/Img/Django.png">
+                <a class="content-text" href="https://www.youtube.com/watch?v=hPXNP1NoVNQ&list=PLZS-MHyEIRo6p_RwsWntxMO5QAqIHHHld">
+                    <p class="content-text">Django Framework akan membantu kita membuat web lebih cepat berbasis bahasa pemrograman phyton</p>
+                </a>
+            </div>
+            
+            <div class="content-title arduino">
+                <img class="content-logo" src="Asset/Img/Arduino.png">
+                <a class="content-text" href="https://www.youtube.com/watch?v=QO_Jlz1qpDw&list=PLGLfVvz_LVvSzj85mDoDm_DTOADEY_5c5">
+                    <p class="content-text">Arduino merupakan kit elektronik open source yang terdapat komponen mikrokontroler dengan jenis AVR</p>
+                </a>
+            </div>
+            
+            <div class="content-title matlab">
+                <img class="content-logo-matlab" src="Asset/Img/Matlab.png">
+                <a class="content-text" href="https://www.youtube.com/watch?v=k4tX00-5Q8E&list=PLZS-MHyEIRo5cD7KXK0200S0I50Z-FGnY">
+                    <p class="content-text">MATLAB digunakan untuk penelitian, pengembangan dan desain sistem dengan komputasi matematis</p>
+                </a>
+            </div>
+            
+            <div class="content-title cvavr">
+                <img class="content-logo" src="Asset/Img/CVAVR.png">
+                <a class="content-text" href="https://www.youtube.com/watch?v=hoaESeqsyws&list=PLL54Z4RovnGifwZxS2_bQYaETnpxGDbak">
+                    <p class="content-text">Code Vision AVR adalah compiler bahasa pemrograman C digunakan untuk memprogram mikrokontroler</p>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="javascripts/show-on-scroll.js"></script>
+    
+	<!-- footer start -->
+	<footer class="page-footer text-white" style="padding-top: 20px;  background-color: #000000; position: relative; top: 1500px;">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<a href="https://www.instagram.com/itarsi.stmkg/">
+					<img src="Asset/img/instagram.png" alt="instagram" class="float-right" width="40px">
+				</a>
+			</div>
+			<div class="col">
+				<a href="https://mail.google.com/mail/u/0/#inbox?compose=VpCqJKjfdQFhXcFCmDQrbNklCgvxmTnSkbNpxXDDCRQkMHdJtPnChprMhMnTCJKgWltvXlG">
+					<img src="Asset/img/email.png" alt="Email" class="float-left" width="40px">
+				</a>
+			</div>
+		</div>
+	</div> 
+		<div class="footer-copyright text-center py-3"> 
+			Copyright &copy; ITARSI FAIR 2020 (MJ INSTRUMENTASI 6A)
+		</div>
+	</footer>
+	<!-- footer end -->
+</body>
+</html>

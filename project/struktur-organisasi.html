@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- to add title on your website -->
+	<title>STRUKTUR ORGANISASI | ITARSI STMKG</title>
+	<!-- to add logo on your title -->
+	<link rel="icon" href="Asset/Img/title3-img.ico">
+	<!-- to create link to bootstrap and jscript -->
+	<link rel="stylesheet" href="Asset/bootstrap/css/bootstrap.min.css">
+	<script src="Asset/jquery/popper.js"></script>
+	<script src="Asset/jquery/jquery.js"></script>
+	<script src="Asset/bootstrap/js/bootstrap.min.js"></script>
+    <link href="stylesheets/slide-in.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <!-- to make fully responsive images -->
+	<style> 
+        
+        .inline-photo {
+          opacity: 0;
+          -webkit-transform: translateY(4em) rotateZ(0deg);
+                  transform: translateY(4em) rotateZ(0deg);
+          -webkit-transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out;
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          width: 90%;
+
+          will-change: transform, opacity;
+        }
+        
+        .inline-photo-down {
+          opacity: 0;
+          -webkit-transform: translateY(-4em) rotateZ(0deg);
+                  transform: translateY(-4em) rotateZ(0deg);
+          -webkit-transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out;
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          width: 90%;
+
+          will-change: transform, opacity;
+        }
+
+        .inline-photo-right {
+          opacity: 0;
+          -webkit-transform: translateX(-4em) rotateZ(0deg);
+                  transform: translateX(-4em) rotateZ(0deg);
+          -webkit-transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out;
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          width: 90%;
+
+          will-change: transform, opacity;
+        }
+
+        .inline-photo-left {
+          opacity: 0;
+          -webkit-transform: translateX(4em) rotateZ(0deg);
+                  transform: translateX(4em) rotateZ(0deg);
+          -webkit-transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out;
+          transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                      opacity .3s .25s ease-out,
+                      -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+          width: 90%;
+
+          will-change: transform, opacity;
+        }
+        
+        .inline-photo.is-visible {
+          opacity: 1;
+          -webkit-transform: rotateZ(0deg);
+                  transform: rotateZ(0deg);
+        }
+        
+        .inline-photo-down.is-visible {
+          opacity: 1;
+          -webkit-transform: rotateZ(0deg);
+                  transform: rotateZ(0deg);
+        }
+        
+        .inline-photo-right.is-visible {
+          opacity: 1;
+          -webkit-transform: rotateZ(0deg);
+                  transform: rotateZ(0deg);
+        }
+        
+        .inline-photo-left.is-visible {
+          opacity: 1;
+          -webkit-transform: rotateZ(0deg);
+                  transform: rotateZ(0deg);
+        }
+        
+	    body
+        {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #EFEFEF;
+        }
+        
+        [data-theme="dark"] {
+          background-color: #1F2125;
+        }
+        
+        [data-theme="dark"] .navbar{
+          background-color: #6000AF;
+        }
+        
+        [data-theme="dark"] .navitem{
+            color: #FFFFFF;
+        }
+        
+        [data-theme="dark"] .dropdown-menu{
+            background-color: #1F2125;
+            color: white;
+            font-size: 15px;
+        }
+        
+        [data-theme="dark"] .dropdown-item{
+            color: #EFEFEF;
+        }
+        
+        [data-theme="dark"] .dropdown-item:hover {
+            background-color: #000000;
+        }
+        
+        [data-theme="dark"] .backgroundlogo{
+            background-color: #6000AF;
+        }
+        
+        [data-theme="dark"] .darklabel{
+            color: #FFFFFF;
+        }
+        
+        [data-theme="dark"] #title{
+            background-color: #414141;
+        }
+        
+        [data-theme="dark"] .judul{
+            color: #E4E4F0;     
+        }
+        
+        [data-theme="dark"] .background-bendahara{
+            background-color: #0F0F0F;
+        }
+        
+        [data-theme="dark"] .background-keilmuan{
+            background-color: #1F2125;
+        }
+        
+        [data-theme="dark"] .background-media-center{
+            background-color: #0F0F0F;
+        }
+        
+        [data-theme="dark"] .background-litbang{
+            background-color: #1F2125;
+        }
+        
+        [data-theme="dark"] .background-mixed{
+            background-color: #0F0F0F;
+        }
+        
+        [data-theme="dark"] h1{
+            color: #E4E4F0;
+        }
+        
+        [data-theme="dark"] h2{
+            color: #E4E4F0;
+        }
+        
+        [data-theme="dark"] h3{
+            color: #E4E4F0;
+        }
+        
+        [data-theme="dark"] h4{
+            color: #E4E4F0;
+        }
+        
+        [data-theme="dark"] h5{
+            color: #E4E4F0;
+        }
+        
+        #navbarCollapse{
+            position: fixed;
+            right: 100px;
+            top: 15px;
+            font-size: 15px;
+        }
+        
+        .navbar{
+            background-color: #E4EAEA;  
+            box-shadow: 1px 1px 1px 1px #000000;
+            font-family: "Google Sans";
+        }
+        
+        .navitem{
+            color: #000000;
+        }
+        
+        .darklabel{
+            color: #000000;
+        }
+        
+        .dropdown-menu{
+            background-color: #EFEFEF;
+            color: white;
+            font-size: 15px;
+        }
+
+        .dropdown-toggle,
+        .dropdown-menu {
+            border-radius: 0px !important;
+        }
+        
+        .dropdown-item:hover {
+            color: white;
+            background-color: #0B7ADD;
+        }
+        
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+        
+        #logo{
+            background-color: #E4EAEA; 
+            width: 240px;
+            height: 50px;
+            border-radius: 2%; 
+            margin-top: -5px;
+        }
+        
+        .backgroundlogo{
+            background-color: #4A4B4B;
+            position: absolute;
+            margin-left: 4px;
+            margin-top: 10px;
+            border-radius: 50%;
+            width: 17px;
+            height: 17px;
+        }
+        
+        #title{
+            position: relative;
+            width: 1379px;
+            height: 80px;
+            margin-top: 100px;
+            background-color: #D1D1D1;
+        }
+        
+        .judul{
+            text-align: center;
+            color: #000000;
+            position: relative;
+            top: 15px;
+        }
+        
+        .background-bendahara{
+            height: 800px;
+            width: 1347px;
+            position: absolute;
+            top: 1550px;
+            left: 0px;
+            -webkit-transform: skew(-2deg); 
+            -moz-transform: skew(-2deg); 
+            -o-transform: skew(-2deg);
+            transform: skew(-2deg) rotate(-2deg);
+            background-color: #0FABFE;
+        }
+        
+        .background-keilmuan{
+            height: 1300px;
+            width: 1347px;
+            position: absolute;
+            top: 2350px;
+            left: 0px;
+            -webkit-transform: skew(-2deg); 
+            -moz-transform: skew(-2deg); 
+            -o-transform: skew(-2deg);
+            transform: skew(-2deg) rotate(-2deg);
+            background-color: #F7F6F2;
+        }
+        
+        .background-media-center{
+            height: 1300px;
+            width: 1347px;
+            position: absolute;
+            top: 3650px;
+            left: 0px;
+            -webkit-transform: skew(-2deg); 
+            -moz-transform: skew(-2deg); 
+            -o-transform: skew(-2deg);
+            transform: skew(-2deg) rotate(-2deg);
+            background-color: #0CFF4E;
+        }
+        
+        .background-litbang{
+            height: 1300px;
+            width: 1347px;
+            position: absolute;
+            top: 4950px;
+            left: 0px;
+            -webkit-transform: skew(-2deg); 
+            -moz-transform: skew(-2deg); 
+            -o-transform: skew(-2deg);
+            transform: skew(-2deg) rotate(-2deg);
+            background-color: #F7F6F2;
+        }
+        
+        .background-mixed{
+            height: 1000px;
+            width: 1347px;
+            position: absolute;
+            top: 6250px;
+            left: 0px;
+            -webkit-transform: skew(-2deg); 
+            -moz-transform: skew(-2deg); 
+            -o-transform: skew(-2deg);
+            transform: skew(-2deg) rotate(-2deg);
+            background-color: #FEB141;
+        }
+        
+        .biodata{
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        
+        .foto-profil{
+            width: 300px;
+            height: 400px;
+        }
+        
+        .foto-profil-bendahara{
+            width: 300px;
+            height: 350px;
+        }
+        
+        .foto-profil-sub-koor{
+            width: 200px;
+            height: 250px;
+        }
+        
+     </style>
+</head>
+<body>
+	<!-- header begin -->
+	<header>
+		<nav class="navbar navbar-expand-md fixed-top" id="header">
+			<!-- icon header -->
+			<a href="index.html" class="navbar-brand">
+                <div id="logo">
+                    <img src="Asset/img/header-img.png" alt="logo" style="height: 43px; left: : 100px; margin-left: 10px; margin-top: 3px;">
+                </div> 
+				
+                
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- menu begin -->
+			<div class="dropdown" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+                        <div class="backgroundlogo"></div>
+						<a href="index.html" class="nav-link navitem" style="position: inherit;">
+							<img src="Asset/Img/home.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Home
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+                        <div class="backgroundlogo"></div>
+                        <a class="nav-link navitem dropdown-toggle" href="profil.html" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+                            <img src="Asset/Img/user.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Profil
+                        </a><span class="caret"></span>
+                        <ul class="dropdown-menu" id="dropdownprofil" aria-labelledby="dropdownMenuButton" style="margin-left: 0px;">
+                            <li><a class="dropdown-item" href="profil.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="filosofi%20logo.html">Filosofi Logo</a></li>
+                            <li><a class="dropdown-item" href="struktur-organisasi.html">Struktur Organisasi</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="backgroundlogo"></div>
+						<a class="nav-link navitem dropdown-toggle" href="profil.html" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+				            <img src="Asset/Img/calendar.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Agenda
+						</a><span class="caret"></span>
+                        <ul class="dropdown-menu" id="dropdownagenda" aria-labelledby="dropdownMenuButton" style="margin-left: 0px;">
+                            <li><a class="dropdown-item" href="mainevent.html">Main Event</a></li>
+                            <li><a class="dropdown-item" href="pastevent.html">Past Event</a></li>
+                            <li><a class="dropdown-item" href="#">Open Discussion</a>
+                            </li>
+                        </ul>
+                        
+					</li>
+                    <li class="nav-item">
+                        <div class="backgroundlogo"></div>
+						<a href="tutorial.html" class="nav-link navitem">
+				            <img src="Asset/Img/cpu.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Tutorial
+						</a>
+					</li>
+					<li class="nav-item">
+                        <div class="backgroundlogo"></div>
+						<a href="contact.html" class="nav-link navitem">
+				            <img src="Asset/Img/phone.svg" style="width: 15px; position: relative; left: -4px; top: -2px;">Contact
+						</a>
+					</li>
+				</ul>
+                
+                <div class="nav-link" style="position: absolute; margin-left: 405px;">
+
+                  <div class="custom-control custom-switch" style="top: -38px;">
+                    <input type="checkbox" class="custom-control-input" id="darkSwitch">
+                    <label class="custom-control-label darklabel" style="font-family: Google Sans;" for="darkSwitch">Dark</label>
+                  </div>
+
+                  <script src="Asset/Bootstrap/js/dark-mode-switch.min.js"></script>
+
+                </div>
+				<!-- menu end -->
+				<!-- search bar begin -->
+			     
+            </div>
+		</nav>
+	</header>
+	<!-- header end -->
+    <div id="title">
+        <h1 class="judul">STRUKTUR ORGANISASI</h1>
+    </div>
+	<div class="container-fluid row" style="margin: 30px 0 30px">
+        <div class="background-struktur">
+            <div class="background-bendahara background-struktur"></div>
+            <div class="background-keilmuan background-struktur"></div>
+            <div class="background-media-center background-struktur"></div>
+            <div class="background-litbang background-struktur"></div>
+            <div class="background-mixed background-struktur"></div>
+        </div>
+        
+        <div class="struktur">
+            <div class="ketua;">
+                <img class="foto-profil inline-photo-right show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: 100px; left: 200px;">
+
+                <div class="biodata inline-photo-left show-on-scroll" style="position: relative; top: -150px; left: 720px;">
+                    <h1><strong>Nanda Winata</strong></h1>
+                    <h4>Instrumentasi 2016</h4>
+                    <h3>Ketua ITARSI</h3>
+                </div>
+            </div>
+            
+            <div class="wakil">
+                <img class="foto-profil inline-photo-left show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: 250px; left: 720px;">
+                <div class="biodata inline-photo-right show-on-scroll" style="position: relative; top: 0px; left: 200px;">
+                    <h1><strong>Taufiqurrahman</strong></h1>
+                    <h4>Instrumentasi 2016</h4>
+                    <h3>Wakil Ketua ITARSI</h3>
+                </div>
+            </div>
+            
+            <div class="bendahara-sekretaris" style="position: absolute; top: 1300px;">
+            <div class="bendahara" style="position: relative; top: 50px;">
+                <img class="foto-profil-bendahara inline-photo-down show-on-scroll" src="Asset/Img/Taruni.png" style="position: relative; top: 300px; left: 200px;">
+                <div class="biodata inline-photo show-on-scroll" style="position: relative; top: 350px; left: 240px;">
+                    <h3><strong>Anisa Puteri Erika</strong></h3>
+                    <h5 style=" position: relative; left: 25px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: 10px;">Bendahara ITARSI</h4>
+                </div>
+            </div>
+            
+            <div class="sekretaris" style="position: relative; top: 50px;">
+                <img class="foto-profil-bendahara inline-photo show-on-scroll" src="Asset/Img/Taruni.png" style="position: relative; top: 0px; left: 800px;">
+                <div class="biodata inline-photo-down show-on-scroll" style="position: relative; top: -500px; left: 840px;">
+                    <h3><strong>Meirina Iskandar</strong></h3>
+                    <h5 style=" position: relative; left: 25px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: 10px;">Sekretaris ITARSI</h4>
+                </div>
+            </div>
+            </div>
+            
+            <div class="keilmuan" style="position: absolute; top: 2300px;">
+            <div class="biodata" style="position: relative; left: 590px; top: 220px;"><h1><strong>Keilmuan</strong></h1></div>
+            <div class="keilmuan" style="position: relative; top: 50px;">
+                <img class="foto-profil-bendahara inline-photo-down show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: 200px; left: 520px;">
+                <div class="biodata" style="position: relative; top: 250px; left: 520px;">
+                    <h3><strong>Hanif Cahyo Romadhon</strong></h3>
+                    <h5 style=" position: relative; left: 70px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: 90px;">Koordinator</h4>
+                </div>
+            </div>
+            <div class="keilmuan" style="position: relative; left: 0px;">
+            <div class="keilmuan" style="position: relative; top: 75px;">
+                <img class="foto-profil-sub-koor inline-photo-down show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: 300px; left: 120px;">
+                <div class="biodata" style="position: relative; top: 350px; left: 135px;">
+                    <h3><strong>Alfan Alfarisy</strong></h3>
+                    <h5 style=" position: relative; left: 5px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: -75px; text-align: center;">Koor Sub Divisi Elektronika <br>dan Pemrograman</h4>
+                </div>
+            </div>
+            
+            <div class="keilmuan" style="position: relative; top: 50px; left: -50px;">
+                <img class="foto-profil-sub-koor inline-photo-down show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: -60px; left: 480px;">
+                <div class="biodata" style="position: relative; top: -10px; left: 450px;">
+                    <h3><strong>Amar Fajri Daapala</strong></h3>
+                    <h5 style=" position: relative; left: 45px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: -30px; text-align: center;">Koor Sub Divisi <br>Jaringan Komunikasi</h4>
+                </div>
+            </div>
+            
+            <div class="keilmuan" style="position: relative; top: -335px; left: 250px;">
+                <img class="foto-profil-sub-koor inline-photo-down show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: -60px; left: 480px;">
+                <div class="biodata" style="position: relative; top: -10px; left: 455px;">
+                    <h3 style=" position: relative; left: 43px;"><strong>M. Nur Huda</strong></h3>
+                    <h5 style=" position: relative; left: 45px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: -30px; text-align: center;">Koor Sub Divisi <br>Website dan Software</h4>
+                </div>
+            </div>
+            
+            
+            <div class="keilmuan" style="position: relative; top: -720px; left: 550px;">
+                <img class="foto-profil-sub-koor inline-photo-down show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: -60px; left: 480px;">
+                <div class="biodata" style="position: relative; top: -10px; left: 450px;">
+                    <h3 style=" position: relative; left: -25px;"><strong>Alfin Syarifuddin Syahab</strong></h3>
+                    <h5 style=" position: relative; left: 45px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: -30px; text-align: center;">Koor Sub Divisi <br>Penulisan Ilmiah</h4>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <div class="media-center" style="position: absolute; top: 4200px;">
+            <div class="biodata" style="position: relative; left: 530px; top: -400px;"><h1><strong>Media Center</strong></h1></div>
+            <div class="media" style="position: relative; top: -300px; left: 50px;">
+                <img class="foto-profil-bendahara inline-photo-down show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: -60px; left: 450px;">
+                <div class="biodata" style="position: relative; top: 330px; left: 140px;">
+                    <h3><strong>Karisma Kusuma Nagari</strong></h3>
+                    <h5 style=" position: relative; left: 70px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: 90px;">Koordinator</h4>
+                </div>
+            </div>
+			
+			<div class="media" style="position: relative; top: -80px; left: -100px;">
+                <img class="foto-profil-sub-koor inline-photo-down show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: -60px; left: 450px;">
+                <div class="biodata" style="position: relative; top: 220px; left: 200px;">
+                    <h3 style=" position: relative; left: -30px;"><strong>Muhammad Fahreza Aditya</strong></h3>
+                    <h5 style=" position: relative; left: 65px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: -30px; text-align: center;">Koordinator Sub Divisi <br>Dokumentasi Publikasi</h4>
+                </div>
+            </div>
+			
+			<div class="media" style="position: relative; top: -330px; left: 315px">
+                <img class="foto-profil-sub-koor inline-photo-down show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: -60px; left: 450px;">
+                <div class="biodata" style="position: relative; top: 220px; left: 220px;">
+                    <h3 style=" position: relative; left: -35px;"><strong>Muhammad A. Diyaputra</strong></h3>
+                    <h5 style=" position: relative; left: 45px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: -35px; text-align: center;">Koordinator Sub Divisi <br>Infografis</h4>
+                </div>
+            </div>
+            </div>
+            
+            <div class="Litbang" style="position: absolute; top: 5020px;">
+                <div class="biodata" style="position: relative; left: 580px; top: 50px;"><h1><strong>Litbang</strong></h1></div>
+            <div class="Litbang" style="position: relative; top: 150px; left: 50px;">
+                <img class="foto-profil-bendahara inline-photo-down show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: -60px; left: 450px;">
+                <div class="biodata" style="position: relative; top: -10px; left: 450px;">
+                    <h3 style=" position: relative; left: 3px;"><strong>Simon Baharja Siagian</strong></h3>
+                    <h5 style=" position: relative; left: 70px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: 90px;">Koordinator</h4>
+                </div>
+            </div>
+			
+			<div class="Litbang" style="position: relative; top: 300px; left: -100px;">
+                <img class="foto-profil-sub-koor inline-photo-down show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: -60px; left: 450px;">
+                <div class="biodata" style="position: relative; top: 0px; left: 300px;">
+                    <h3 style=" position: relative; left: 115px;"><strong>Ismail Ikram Rusman</strong></h3>
+                    <h5 style=" position: relative; left: 160px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: 90px; text-align: center;">Koordinator Sub Divisi <br>Pengabdian Masyarakat</h4>
+                </div>
+            </div>
+			
+			<div class="Litbang" style="position: relative; top: -85px; left: 300px;">
+                <img class="foto-profil-sub-koor inline-photo-down show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: -60px; left: 450px;">
+                <div class="biodata" style="position: relative; top: 0px; left: 450px;">
+                    <h3><strong>Wildan Hidayat</strong></h3>
+                    <h5 style=" position: relative; left: 15px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: -55px; text-align: center;"> Koordinator Sub Divisi <br>Penelitian</h4>
+                </div>
+            </div>
+            </div>    
+            
+            <div class="humas-wirausaha-sdm" style="position: absolute; top: 6300px;">
+            <div class="humas" style="position: relative; top: 207px; left: -350px;">
+                <img class="foto-profil-bendahara inline-photo-down show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: -60px; left: 450px;">
+                <div class="biodata" style="position: relative; top: -10px; left: 450px;">
+                    <h3 style=" position: relative; left: -5px;"><strong>M. Fariz Arief Fadhillah</strong></h3>
+                    <h5 style=" position: relative; left: 70px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: 10px;">Koordinator Divisi humas</h4>
+                </div>
+            </div>
+			
+			
+			<div class="wirausaha" style="position: relative; top: -250px; left: 50px;">
+                <img class="foto-profil-bendahara inline-photo-down show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: -60px; left: 450px;">
+                <div class="biodata" style="position: relative; top: -10px; left: 520px;">
+                    <h3 style=" position: relative; left: -15px;"><strong>Arif Nurkhamdi</strong></h3>
+                    <h5 style=" position: relative; left: 0px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: -80px;">Koordinator Divisi Wirausaha</h4>
+                </div>
+            </div>
+			
+			
+			<div class="sdm" style="position: relative; top: -709px; left: 450px;">
+                <img class="foto-profil-bendahara inline-photo-down show-on-scroll" src="Asset/Img/taruna.png" style="position: relative; top: -60px; left: 450px;">
+                <div class="biodata" style="position: relative; top: -10px; left: 460px;">
+                    <h3><strong>Fajar Yulitradiastanto</strong></h3>
+                    <h5 style=" position: relative; left: 57px;">Instrumentasi 2016</h5>
+                    <h4 style=" position: relative; left: 50px;">Koor Divisi SDM</h4>
+                </div>
+            </div>
+            </div>
+            
+        </div>
+	</div>
+    <script src="javascripts/show-on-scroll.js"></script>
+    
+	<footer class="page-footer text-white" style="padding-top: 20px;  background-color: #000000; position: relative; top: 6250px;">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<a href="https://www.instagram.com/itarsi.stmkg/">
+					<img src="Asset/img/instagram.png" alt="instagram" class="float-right" width="40px">
+				</a>
+			</div>
+			<div class="col">
+				<a href="https://mail.google.com/mail/u/0/#inbox?compose=VpCqJKjfdQFhXcFCmDQrbNklCgvxmTnSkbNpxXDDCRQkMHdJtPnChprMhMnTCJKgWltvXlG">
+					<img src="Asset/img/email.png" alt="Email" class="float-left" width="40px">
+				</a>
+			</div>
+		</div>
+	</div> 
+		<div class="footer-copyright text-center py-3"> 
+			Copyright &copy; ITARSI FAIR 2020 (MJ INSTRUMENTASI 6A)
+		</div>
+	</footer>
+    
+	<!-- footer end -->
+</body>
+</html>
