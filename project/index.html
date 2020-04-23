@@ -4,15 +4,19 @@
 	<meta charset="UTF-8">
 	<!-- to add title on your website -->
 	<title>HOME | ITARSI STMKG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- to add logo on your title -->
 	<link rel="icon" href="Asset/Img/title3-img.ico">
 	<!-- to create link to bootstrap and jscript -->
-	<link rel="stylesheet" href="Asset/bootstrap/css/bootstrap.min.css">
-	<script src="Asset/jquery/popper.js"></script>
-	<script src="Asset/jquery/jquery.js"></script>
-	<script src="Asset/bootstrap/js/bootstrap.min.js"></script>
-    <link href="stylesheets/slide-in.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="asset/bootstrap/css/bootstrap.min.css">
+    <script src="asset/bootstrap/js/bootstrap.min.js"></script>
+	<script src="asset/jquery/Jquery.js"></script>
+	<script src="asset/jquery/popper.js"></script>
+	<script src="assets/js/jquery-1.10.2.js"></script>
+	<script src="assets/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="stylesheets/slide-in.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Google+Sans" rel="stylesheet">
 	<!-- to make fully responsive images -->
@@ -127,6 +131,10 @@
           background-color: #6000AF;
         }
         
+        [data-theme="dark"] nav .navbar-nav li a{
+            color: white !important;
+        }
+        
         [data-theme="dark"] .navitem{
             color: #FFFFFF;
         }
@@ -153,9 +161,6 @@
           background-color: #C3C7CD;
         }
         
-        [data-theme="dark"] #WelcomeBox{
-            opacity: 70%;
-        }
         
         [data-theme="dark"] .sosialmedia{
             background-color: #333333;
@@ -175,25 +180,19 @@
             background-color: #6000AF;
         }
         
-        [data-theme="dark"] .mainevent{
+        [data-theme="dark"] #MainEvent{
+            background-color: #0F0F0F;
+        }
+        
+        [data-theme="dark"] .cardevent{
             background-color: #333333;
             border-radius: 2%; 
             font-size: 13px;
             box-shadow: 1px 1px 1px 1px #121111;   
         }
         
-        [data-theme="dark"] .pastevent{
-            background-color: #333333;
-            border-radius: 2%; 
-            font-size: 13px;
-            box-shadow: 1px 1px 1px 1px #121111;   
-        }
-        
-        [data-theme="dark"] .competitionevent{
-            background-color: #333333;
-            border-radius: 2%; 
-            font-size: 13px;
-            box-shadow: 1px 1px 1px 1px #121111;   
+        [data-theme="dark"] #CompetitionEvent{
+            background-color: #0F0F0F;
         }
         
         [data-theme="dark"] .textinfo{
@@ -216,17 +215,14 @@
             color: #97BEDB;
         }
         
-        #navbarCollapse{
-            position: fixed;
-            right: 100px;
-            top: 15px;
-            font-size: 15px;
-        }
-        
         .navbar{
             background-color: #E4EAEA;  
             box-shadow: 1px 1px 1px 1px #000000;
             font-family: "Google Sans";
+        }
+        
+        nav .navbar-nav li a{
+            color: #000000 !important;
         }
         
         .navitem{
@@ -234,31 +230,28 @@
         }
         
         #dark-mode{
-            top: -38px; 
+            top: 7px;
         }
         
         .darklabel{
             color: #000000;
         }
         
-        #WelcomeBox{
+        .carousel-item{
+            position: relative;
+        }
+        .black-overlay{
             position: absolute;
-            left: 0px;
-            top: 50px;
-            width: 1349px;
-            height: 625px;
-            background-color: #19191C;
-            opacity: 70%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0,0,0,0.6)
         }
         
-        #Welcome{
-            position: absolute;
-            left: 350px;
-            top: 260px;
-            height: 180px;
-            width: 700px;
-            text-align: center;
-            
+        .carousel-caption {
+            margin-bottom: 200px;
+            margin-left: 80px;
         }
         
         .dropdown-menu{
@@ -274,7 +267,7 @@
         
         .dropdown-item:hover {
             color: white;
-            background-color: #0B7ADD;
+            background-color: #C7C5C5;
         }
         
         .dropdown:hover>.dropdown-menu {
@@ -322,139 +315,29 @@
         
         .backgroundimg{
             background-color: #4A4B4B;
-            position: absolute;
-            left: 95px;
-            top: 10px;
             width: 60px;
             height: 60px;
+            margin-top: 20px;
             border-radius: 50%;
         }
         
-        #box1{
-            position: absolute;
-            left: 250px;
-            top: 770px;
-            width: 250px;
-            height: 200px;  
+        #MainEvent{
+            background-color: #8ec6c5;
         }
         
-        #box2{
-            position: absolute;
-            left: 545px;
-            top: 770px;
-            width: 250px;
-            height: 200px;
-        }
-        
-        #box3{
-            position: absolute;
-            left: 840px;
-            width: 250px;
-            top: 770px;
-            height: 200px;
-        }
-        
-        .mainevent{
+        .cardevent{
             background-color: #ffffff;
             border-radius: 2%; 
             font-size: 13px;
             box-shadow: 3px 3px 3px 3px #545454; 
         }
         
-        #MainEvent1{
-            position: absolute;
-            left: 90px;
-            top: 1120px;
-            width: 370px;
-            height: 500px;   
-        }
-        
-        #MainEvent2{
-            position: absolute;
-            left: 490px;
-            top: 1120px;
-            width: 370px;
-            height: 500px;
-        }
-        
-        #MainEvent3{
-            position: absolute;
-            left: 890px;
-            top: 1120px;
-            width: 370px;
-            height: 500px;
-        }
-        
-        .pastevent{ 
-            background-color: #ffffff;
-            border-radius: 2%; 
-            font-size: 13px;
-            box-shadow: 3px 3px 3px 3px #545454;
-        }
-        
-        #PastEvent1{
-            position: absolute;
-            left: 90px;
-            top: 1780px;
-            width: 370px;
-            height: 500px; 
-        }
-        
-        #PastEvent2{
-            position: absolute;
-            left: 490px;
-            top: 1780px;
-            width: 370px;
-            height: 500px;
-        }
-        
-        #PastEvent3{
-            position: absolute;
-            left: 890px;
-            top: 1780px;
-            width: 370px;
-            height: 500px;
-            background-color:
-        }
-        
-        .competitionevent{
-            background-color: #ffffff;
-            border-radius: 2%; 
-            font-size: 13px;
-            box-shadow: 3px 3px 3px 3px #545454;
-        }
-        
-        #CompetitionEvent1{
-            position: absolute;
-            left: 90px;
-            top: 2450px;
-            width: 370px;
-            height: 350px;
-        }
-        
-        #CompetitionEvent2{
-            position: absolute;
-            left: 490px;
-            top: 2450px;
-            width: 370px;
-            height: 350px;
-        }
-        
-        #CompetitionEvent3{
-            position: absolute;
-            left: 890px;
-            top: 2450px;
-            width: 370px;
-            height: 350px;
-            background-color:
+        #CompetitionEvent{
+            background-color: #6983aa;
         }
         
         .textinfo{
             color: #000000;
-        }
-        
-        .lineinfo{
-             background-color: #000000;
         }
         
         .infobox{
@@ -473,299 +356,114 @@
             color: #000000; 
         }
         
-        @media only screen and (max-width: 608px){
-            #WelcomeBox{
-                height: 336px;
-                width: 591px;
+        @media (max-width: 920px) {
+            .carousel-caption {
+                margin-bottom: 100px;
+                margin-left: 30px;
             }
-            
-            .carousel-indicators{
-                visibility: hidden;
+            h1{
+                font-size: 45px;
             }
-            
-            .logo{
-                position: absolute;
-                top: 10px;
-                left: 200px;
-                width: 170px;
-                height: 40px;
-            }
-            
-            .logo-img{
-                position: absolute;
-                left: 0px;
-                top: 2px;
-                height: 30px;
-            }
-            
             .backgroundlogo{
                 margin-left: -4px;
-                
+            }
+            .dropdown-menu{
+                background-color: #E4EAEA;
+                border-left-style: none;
+                border-right-style: none;
+            }
+            [data-theme="dark"] .dropdown-menu{
+                background-color: #6000AF;
             }
             
-            #header{
-                height: 90px;
+        }
+
+        @media (max-width: 720px) {
+            .carousel-caption{
+                margin-bottom: 40px;
             }
-            
-            #home{
-                position: fixed;
-                left: 30px;
-                top: 50px;
-            }
-            
-            #profil{
-                position: fixed;
-                left: 110px;
-                top: 50px;
-            }
-            
-            #agenda{
-                position: fixed;
-                left: 200px;
-                top: 50px;
-            }
-            
-            #tutorial{
-                position: fixed;
-                left: 310px;
-                top: 50px;
-            }
-            
-            #contact{
-                position: fixed;
-                left: 400px;
-                top: 50px;
-            }
-            
-            #dark-mode{
-                position: fixed;
-                left: 490px;
-                top: 57px;
-            }
-            
-            .carousel-inner{
-                position: inherit;
-                top: 90px;
-            }
-            
-            
             h1{
-                font-size: 40px;
+                font-size: 25px;
             }
-            
-            #Welcome{
-                left: 60px;
-                top: 170px;
-                height: 100px;
-                width: 500px;
-            }
-            
-            .textinfo{
-                position: relative;
-                top: 100px;
-            }
-            
-            #box1{
-                position: absolute;
-                top: 470px;
-                left: 170px;
-            }
-            
-            #box2{
-                position: absolute;
-                top: 720px;
-                left: 170px;
-            }
-            
-            #box3{
-                position: absolute;
-                top: 970px;
-                left: 170px;
-            }
-            
-            #mainevent{
-                position: relative;
-                top: 570px;
-            }
-            #MainEvent1{
-                left: 100px;
-                top: 1300px;  
-            }
-            #MainEvent2{
-                left: 100px;
-                top: 1850px;  
-            }
-            #MainEvent3{
-                left: 100px;
-                top: 2400px;  
-            }
-            
-            #pastevent{
-                position: relative;
-                top: 1650px;
-            }
-            #PastEvent1{
-                left: 100px;
-                top: 3050px;  
-            }
-            #PastEvent2{
-                left: 100px;
-                top: 3600px;  
-            }
-            #PastEvent3{
-                left: 100px;
-                top: 4150px;  
-            }
-            
-            #competitionevent{
-                position: relative;
-                top: 2700px;
-            }
-            #CompetitionEvent1{
-                left: 100px;
-                top: 4750px; 
-            }
-            #CompetitionEvent2{
-                left: 100px;
-                top: 5150px; 
-            }
-            #CompetitionEvent3{
-                left: 100px;
-                top: 5550px; 
-            }
-            
-            #tentangitarsi{
-                position: relative;
-                top: 3450px;  
-            }
-            
-            .tentangitarsitext{
-                position: relative;
-                top: 3450px;
-            }
-            
-            .lineinfo{
-                visibility: visible;
-            }
-            
-            #lineinformation{
-                position: absolute;
-                top: -285px;
-                left: -380px;
-            }
-            
-            #linemainevent{
-                position: absolute;
-                top: 190px;
-                left: -380px;
-            }
-            
-            #linepastevent{
-                position: absolute;
-                top: 1280px;
-                left: -380px;
-            }
-            
-            #linecompetition{
-                position: absolute;
-                top: 2315px;
-                left: -380px;
-            }
-            
-            #linetentangitarsi{
-                position: absolute;
-                top: 3070px;
-                left: -380px;
-            }
-            
-            .pagefooter{
-                position: absolute;
-                top: 6800px;
-                width: 600px;
-            }
-        } 
+        }
+        
     
 	</style>
 </head>
 <body>
 	<!-- header begin -->
 	<header>
-		<nav class="navbar navbar-expand-md fixed-top" id="header">
-			<!-- icon header -->
-			<a href="index.html" class="navbar-brand">
-                <div class="logo">
-                    <img class="logo-img" src="Asset/img/header-img.png" alt="logo" style="left: : 100px; margin-left: 10px; margin-top: 3px;">
-                </div> 
-				
-                
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<!-- menu begin -->
-			<div class="dropdown" id="navbarCollapse">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active" id="home">
-                        <div class="backgroundlogo"></div>
-						<a href="index.html" class="nav-link navitem" style="position: inherit;">
-							<img class="header-logo" src="Asset/Img/home.svg" >Home
-						</a>
-					</li>
-					<li class="nav-item dropdown" id="profil">
-                        <div class="backgroundlogo"></div>
-                        <a class="nav-link navitem dropdown-toggle" href="profil.html" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-                            <img class="header-logo" src="Asset/Img/user.svg">Profil
-                        </a><span class="caret"></span>
-                        <ul class="dropdown-menu" id="dropdownprofil" aria-labelledby="dropdownMenuButton" style="margin-left: 0px;">
-                            <li><a class="dropdown-item" href="profil.html">About Us</a></li>
-                            <li><a class="dropdown-item" href="filosofi%20logo.html">Filosofi Logo</a></li>
-                            <li><a class="dropdown-item" href="struktur-organisasi.html">Struktur Organisasi</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown" id="agenda">
-                        <div class="backgroundlogo"></div>
-						<a class="nav-link navitem dropdown-toggle" href="profil.html" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-				            <img class="header-logo" src="Asset/Img/calendar.svg">Agenda
-						</a><span class="caret"></span>
-                        <ul class="dropdown-menu" id="dropdownagenda" aria-labelledby="dropdownMenuButton" style="margin-left: 0px;">
-                            <li><a class="dropdown-item" href="mainevent.html">Main Event</a></li>
-                            <li><a class="dropdown-item" href="pastevent.html">Past Event</a></li>
-                            <li><a class="dropdown-item" href="#">Open Discussion</a>
-                            </li>
-                        </ul>
-                        
-					</li>
-                    <li class="nav-item" id="tutorial">
-                        <div class="backgroundlogo"></div>
-						<a href="tutorial.html" class="nav-link navitem">
-				            <img class="header-logo" src="Asset/Img/cpu.svg" >Tutorial
-						</a>
-					</li>
-					<li class="nav-item" id="contact">
-                        <div class="backgroundlogo"></div>
-						<a href="contact.html" class="nav-link navitem">
-				            <img class="header-logo" src="Asset/Img/phone.svg">Contact
-						</a>
-					</li>
-				</ul>
-                
-                <div class="nav-link" style="position: absolute; margin-left: 405px;">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" >
+            <div class="container">
+                <a class="navbar-brand" href="Index.html" style="position: relative; left: -40px;">
+                    <div class="logo">
+                        <img class="logo-img" src="Asset/img/header-img.png" alt="logo" style="margin-left: 10px; margin-top: 3px;">
+                    </div> 
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+         
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav ml-auto text-white">
+                        <li class="nav-item">
+                            <div class="backgroundlogo"></div>    
+                            <a class="nav-link" href="index.html">
+                                <img class="header-logo" src="Asset/Img/home.svg">Home
+                            </a>  
+                        </li>  
 
-                  <div class="custom-control custom-switch" id="dark-mode">
-                    <input type="checkbox" class="custom-control-input" id="darkSwitch">
-                    <label class="custom-control-label darklabel" style="font-family: Google Sans;" for="darkSwitch">Dark</label>
-                  </div>
+                        <li class="nav-item dropdown">
+                            <div class="backgroundlogo"></div>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProfil" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="header-logo" src="Asset/Img/user.svg">Profil
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownProfil">
+                                <a class="dropdown-item" href="profil.html">About Us</a>
+                                <a class="dropdown-item" href="filosofi%20logo.html">Filosofi Logo</a>
+                                <a class="dropdown-item" href="struktur-organisasi.html">Pengurus Organisasi</a>  
+                            </div>
+                        </li>
 
-                  <script src="Asset/Bootstrap/js/dark-mode-switch.min.js"></script>
+                        <li class="nav-item dropdown">
+                            <div class="backgroundlogo"></div>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAgenda" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="header-logo" src="Asset/Img/calendar.svg">Agenda
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownAgenda">
+                                <a class="dropdown-item" href="mainevent.html">Main Event</a>
+                                <a class="dropdown-item" href="pastevent.html">Past Event</a>
+                                <a class="dropdown-item" href="open-discussion.html">Open Discussion</a>
+                            </div>
+                        </li>
 
+                        <li class="nav-item">
+                            <div class="backgroundlogo"></div>
+                            <a class="nav-link" href="tutorial.html">
+                                <img class="header-logo" src="Asset/Img/cpu.svg">Tutorial
+                            </a>  
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="backgroundlogo"></div>
+                            <a class="nav-link" href="contact.html">
+                                <img class="header-logo" src="Asset/Img/phone.svg">Contact
+                            </a>  
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="custom-control custom-switch" id="dark-mode">
+                                <input type="checkbox" class="custom-control-input" id="darkSwitch">
+                                <label class="custom-control-label darklabel" style="font-family: Google Sans;" for="darkSwitch">Dark</label>
+                            </div>
+                            <script src="Asset/Bootstrap/js/dark-mode-switch.min.js"></script>
+                        </li> 
+                    </ul>
                 </div>
-				<!-- menu end -->
-				<!-- search bar begin -->
-			     
+                
             </div>
-		</nav>
-	</header>
+        </nav>  
+    </header>
 	<!-- header end -->
 	<main role="main">
 	<!-- slider begin -->
@@ -777,213 +475,267 @@
 		</ul>
 	
 		<!-- main slideshow -->
-		<div class="carousel-inner">
+		<div class="carousel-inner"> 
 			<div class="carousel-item active">
-				<img src="asset/img/slider1-img.jpeg" alt="Kegiatan ITARSI 1" width="100%" height="100%">
+				<img class="slide" src="asset/img/slider1-img.jpeg" alt="Kegiatan ITARSI 1" width="100%" height="100%">
+                <div class="black-overlay"></div>
 			</div>
 			<div class="carousel-item">
-				<img src="asset/img/slider2-img.jpeg" alt="Kegiatan ITARSI 2" width="100%" height="100%">
+				<img class="slide" src="asset/img/slider2-img.jpeg" alt="Kegiatan ITARSI 2" width="100%" height="100%">
+                <div class="black-overlay"></div>
 			</div>
 			<div class="carousel-item">
-				<img src="asset/img/slider3-img.jpg" alt="Kegiatan ITARSI 3" width="100%" height="100%">
-			</div>
-		</div>
-        <div id="WelcomeBox"></div>
-        <div class="carousel-caption optional-shadow" id="Welcome" style="opacity: 100%; border-style: none; border-width: thick; border-color: #DCD5CA;">
-            <h1 class="font-weight-bold inline-photo-right show-on-scroll" style="color: #FC8105; font-family: Google Sans;"><i>SELAMAT DATANG</i></h1>
-            <h1 class="font-weight-bold inline-photo-left show-on-scroll" style="font-family: Google Sans;">WEBSITE ITARSI STMKG</h1>
+				<img class="slide" src="asset/img/slider3-img.jpg" alt="Kegiatan ITARSI 3" width="100%" height="100%">
+                <div class="black-overlay"></div>
+			</div>   
+            <div class="carousel-caption text-center" style="opacity: 100%; border-style: none; border-width: thick; border-color: #DCD5CA;">
+            <h1 class="font-weight-bold inline-photo-right show-on-scroll text-center" style="color: #FC8105; font-family: Google Sans;"><i>SELAMAT DATANG</i></h1>
+            <h1 class="font-weight-bold inline-photo-left show-on-scroll text-center" style="color: white; font-family: Google Sans;">WEBSITE ITARSI STMKG</h1>
         </div>
-        
+		</div>
 		<!-- build left and right control -->
 		<a class="carousel-control-prev" href="#demo" data-slide="prev">
 			<span class="carousel-control-prev-icon"></span>
 		</a>
 		<a class="carousel-control-next" href="#demo" data-slide="next">
 			<span class="carousel-control-next-icon"></span>
-		</a>
-	</div>
+		</a> 
+    </div>
         
-    <div id="SosialMedia" style="margin: 20px 0 30px">
-        <h4 class="text-center textinfo">For Moreinformation</h4>
-        <div id="lineinformation">
-            <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 735px; left: 590px;"></div>
-            <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 735px; left: 650px;"></div>
-            <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 735px; left: 710px;"></div>
-        </div>    
-        <div class="sosialmedia" id="box1">
-            <div class="backgroundimg"></div>
-            <img src="Asset/Img/email.png" width="50px" height="50px" style="position: inherit; left: 100px; top: 15px;">
-            <h5 class="text-center" style="margin-left: 30px; margin-right: 30px; margin-top: 75px;">E-MAIL</h5>
-            <p class="text-center" style="margin-left: 30px; margin-right: 30px; margin-top: 0px;" >Contact Us For more information to our e-mail account <a href="https://mail.google.com/mail/u/0/#inbox?compose=VpCqJKjfdQFhXcFCmDQrbNklCgvxmTnSkbNpxXDDCRQkMHdJtPnChprMhMnTCJKgWltvXlG">itarsi@stmkg.ac.id</a></p>
-        </div>
-    
-        <div class="sosialmedia" id="box2" href="https://www.instagram.com/itarsi.stmkg/">
-            <div class="backgroundimg"></div>
-            <img src="Asset/Img/instagramimg.svg" width="50px" height="50px" style="position: inherit; left: 100px; top: 15px;">
-            <h5 class="text-center" style="margin-left: 30px; margin-right: 30px; margin-top: 75px;">INSTAGRAM</h5>
-            <p class="text-center" style="margin-left: 30px; margin-right: 30px; margin-top: 0px;">For moreinformation follow our instagram account <a href="https://www.instagram.com/">@itarsi.stmkg</a></p>
-        </div>
-    
-        <div class="sosialmedia" id="box3">
-            <div class="backgroundimg"></div>
-            <img src="Asset/Img/WA.png" width="50px" height="50px" style="position: inherit; left: 100px; top: 15px;">
-            <h5 class="text-center" style="margin-left: 30px; margin-right: 30px; margin-top: 75px;">WHATSAPP</h5>
-            <p class="text-center" style="margin-left: 30px; margin-right: 30px; margin-top: 0px;">If you have a question, contact our Whatsapp 081218293019</p>
-        </div>
-    </div> 
-    <br><br><br><br><br><br><br><br><br><br><br>
+            
         
-    <div class="container-fluid row" id="MainEvent" style="margin: 20px 0 30px">
+    <div class="container-fluid row" id="SosialMedia" style="margin: 50px 0 20px">
         <div class="container">
-            <h4 class="text-center textinfo" id="mainevent">Main Event</h4>
-            <div id="linemainevent">
-                <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 1075px; left: 590px;"></div>
-                <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 1075px; left: 650px;"></div>
-                <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 1075px; left: 710px;"></div>
-            </div>
-            <div class="mainevent inline-photo show-on-scroll" id="MainEvent1">
-                <img src="Asset/Img/Itarsi%20Fair%20Website.jpg" alt="Event1" style="height: 250px; width: 370px; position: inherit; border-top-left-radius: 2%; border-top-right-radius: 2%; ">
-                <div class="infobox" style="height: 30px; width: 200px; position: inherit;">
-                    <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">September 17, 2018</h6>
+            <h4 class="text-center textinfo">For More information</h4> 
+            <div class="row d-flex justify-content-center" style="margin: 50px 0 20px">
+                
+                <div class="col-md-3" style="margin-bottom: 50px;">
+                    <div class="card sosialmedia">
+                        <div class="card-img-top d-flex justify-content-center">
+                            <div class="backgroundimg">
+                                <img src="Asset/Img/email.png" style="width: 50px; height: 50px; margin-left: 5px; margin-top: 5px;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="margin-left: 30px; margin-right: 30px; margin-top: -10px">E-MAIL</h5>
+                            <p class="card-text text-center" style="margin-left: 10px; margin-right: 10px; margin-top: 0px;" >Contact Us For more information to our e-mail account <a href="https://mail.google.com/mail/u/0/#inbox?compose=VpCqJKjfdQFhXcFCmDQrbNklCgvxmTnSkbNpxXDDCRQkMHdJtPnChprMhMnTCJKgWltvXlG">itarsi@stmkg.ac.id</a></p>
+                        </div>
+                    </div>
                 </div>
-                <h5 class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 270px;">ITARSI FAIR 2020</h5>
-                <p class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 20px;">
-                Untuk Apa ITARSI Fair Diadakan? Teknologi terus menerus berkembang seiring berjalannya waktu. Internet of Things (IoT), Big Data, dan Artificial […]</p>
-                <div class="infobox" style="height: 30px; width: 370px; position: inherit; top: 460px;">
-                    <img src="Asset/Img/user.svg" style="height: 18px; width: 18px; position: inherit; margin-top: 5px; margin-left: 20px;">
-                    <p style="color: #FFFFFF; margin-left: 50px; margin-top: 5px; position: inherit;">ITARSI</p>
-                    <p style="color: #FFFFFF; margin-right: 10px; margin-top: 5px; position: inherit; left: 280px;">Read More</p>
+                
+                <div class="col-md-3" style="margin-bottom: 50px;">
+                    <div class="card sosialmedia">
+                        <div class="card-img-top d-flex justify-content-center">
+                            <div class="backgroundimg">
+                                <img src="Asset/Img/instagramimg.svg" style="width: 50px; height: 50px; margin-left: 5px; margin-top: 5px;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="margin-left: 30px; margin-right: 30px; margin-top: -10px">INSTAGRAM</h5>
+                            <p class="card-text text-center" style="margin-left: 10px; margin-right: 10px; margin-top: 0px;" >For moreinformation follow our instagram account <a href="https://www.instagram.com/">@itarsi.stmkg</a></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="mainevent inline-photo show-on-scroll" id="MainEvent2">
-                <img src="Asset/Img/Itarsi%20Fair%20Elektronika.jpg" alt="Event1" style="height: 250px; width: 370px; position: inherit; border-top-left-radius: 2%; border-top-right-radius: 2%; ">
-                <div class="infobox" style="height: 30px; width: 200px; position: inherit;">
-                    <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">December 12, 2017</h6>
+                
+                <div class="col-md-3" style="margin-bottom: 50px;">
+                    <div class="card sosialmedia">
+                        <div class="card-img-top d-flex justify-content-center">
+                            <div class="backgroundimg">
+                                <img src="Asset/Img/WA.png" style="width: 50px; height: 50px; margin-left: 5px; margin-top: 5px;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="margin-left: 30px; margin-right: 30px; margin-top: -10px">WHATSAPP</h5>
+                            <p class="card-text text-center" style="margin-left: 10px; margin-right: 10px; margin-top: 0px;" >If you have a question, contact our Whatsapp 081218293019</p>
+                        </div>
+                    </div>
                 </div>
-                <h5 class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 270px;">ITARSI FAIR 2020</h5>
-                <p class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 20px;">
-                Taruna Bima beserta 2 orang taruna lainnya merupakan perwakilan Kontingen STMKG dalam lomba karya tulis ilmiah tingkat nasional yang diselenggarakan […]</p>
-                <div class="infobox" style="height: 30px; width: 370px; position: inherit; top: 460px;">
-                    <img src="Asset/Img/user.svg" style="height: 18px; width: 18px; position: inherit; margin-top: 5px; margin-left: 20px;">
-                    <p style="color: #FFFFFF; margin-left: 50px; margin-top: 5px; position: inherit;">ITARSI</p>
-                    <p style="color: #FFFFFF; margin-right: 10px; margin-top: 5px; position: inherit; left: 280px;">Read More</p>
-                </div>
-            </div>
-            
-            <div class="mainevent inline-photo show-on-scroll" id="MainEvent3">
-                <img src="Asset/Img/Itarsi%20Fair%20ICT.jpg" alt="Event1" style="height: 250px; width: 370px; position: inherit; border-top-left-radius: 2%; border-top-right-radius: 2%; ">
-                <div class="infobox" style="height: 30px; width: 200px; position: inherit;">
-                    <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">September 17, 2018</h6>
-                </div>
-                <h5 class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 270px;">ITARSI FAIR 2020</h5>
-                <p class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 20px;">
-                Kompetisi Muatan Roket Indonesia (KOMURINDO) dan Kompetisi Muatan Balon Atmosfer (KOMBAT) merupakan kompetisi tahunan yang diselenggarakan oleh LAPAN sejak taun […]</p>
-                <div class="infobox" style="height: 30px; width: 370px; position: inherit; top: 460px;">
-                    <img src="Asset/Img/user.svg" style="height: 18px; width: 18px; position: inherit; margin-top: 5px; margin-left: 20px;">
-                    <p style="color: #FFFFFF; margin-left: 50px; margin-top: 5px; position: inherit;">ITARSI</p>
-                    <p style="color: #FFFFFF; margin-right: 10px; margin-top: 5px; position: inherit; left: 280px;">Read More</p>
-                </div>
-            </div>
+
+            </div>    
         </div>
     </div>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-       
-    <div class="container-fluid row" id="PastEvent" style="margin: 20px 0 30px">
+        
+    <div class="container-fluid row" id="MainEvent" style="margin: 100px 0 20px;">
         <div class="container">
-            <h4 class="text-center textinfo" id="pastevent">Past Event</h4>
-            <div id="linepastevent">
-                <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 1735px; left: 590px;"></div>
-                <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 1735px; left: 650px;"></div>
-                <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 1735px; left: 710px;"></div>
-            </div>
-            <div class="pastevent inline-photo show-on-scroll" id="PastEvent1">
-                <img src="Asset/Img/slider1-img.jpeg" alt="Event1" style="height: 250px; width: 370px; position: inherit; border-top-left-radius: 2%; border-top-right-radius: 2%; ">
-                <div class="infobox" style="height: 30px; width: 200px; position: inherit;">
-                    <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">September 17, 2018</h6>
+            <h4 class="text-center textinfo" style="margin-top: 20px;"><strong>Main Event</strong></h4>
+            <div class="row d-flex justify-content-center" style="margin-top: 40px;">
+                
+                <div class="inline-photo show-on-scroll col-md-4" style="margin-bottom: 50px;">
+                   <div class="card cardevent">
+                      <img src="Asset/Img/Itarsi%20Fair%20Website.jpg" class="card-img-top" style="height: 250px; border-top-left-radius: 2%; border-top-right-radius: 2%;">
+                      <div class="infobox card-img-top" style="height: 30px; width: 200px; position: relative; top: -250px;">
+                        <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">December 12, 2017</h6>
+                      </div>
+                      <div class="card-body" style="margin-top: -30px;">
+                        <h5 class="card-title">ITARSI FAIR 2020</h5>
+                        <p class="card-text text-justify">Untuk Apa ITARSI Fair Diadakan? Teknologi terus menerus berkembang seiring berjalannya waktu. Internet of Things (IoT), Big Data, dan Artificial […]
+                        </p>
+                      </div>
+                      <div class="infobox card-img-bottom" style="height: 30px; width: auto; position: inherit; margin-bottom: 10px;">
+                            <img src="Asset/Img/user.svg" style="height: 18px; width: 18px; position: inherit; margin-top: 5px; margin-left: 10px;" >
+                            <p style="color: #FFFFFF; margin-top: -17px; margin-left: 40px; position: inherit;">ITARSI</p>
+                            <p style="color: #FFFFFF; margin-top: -36px; margin-left: 200px; position: inherit;">Read More</p>
+                      </div>
+                    </div>   
                 </div>
-                <h5 class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 270px;">ITARSI FAIR 2018</h5>
-                <p class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 45px;">
-                Untuk Apa ITARSI Fair Diadakan? Teknologi terus menerus berkembang seiring berjalannya waktu. Internet of Things (IoT), Big Data, dan Artificial […]</p>
-                <div class="infobox" style="height: 30px; width: 370px; position: inherit; top: 460px;">
-                    <img src="Asset/Img/user.svg" style="height: 18px; width: 18px; position: inherit; margin-top: 5px; margin-left: 20px;">
-                    <p style="color: #FFFFFF; margin-left: 50px; margin-top: 5px; position: inherit;">ITARSI</p>
-                    <p style="color: #FFFFFF; margin-right: 10px; margin-top: 5px; position: inherit; left: 280px;">Read More</p>
+                
+                <div class="inline-photo show-on-scroll col-md-4" style="margin-bottom: 50px;">
+                   <div class="card cardevent">
+                      <img src="Asset/Img/Itarsi%20Fair%20Elektronika.jpg" class="card-img-top" style="height: 250px; border-top-left-radius: 2%; border-top-right-radius: 2%;">
+                      <div class="infobox card-img-top" style="height: 30px; width: 200px; position: relative; top: -250px;">
+                        <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">December 12, 2017</h6>
+                      </div>
+                      <div class="card-body" style="margin-top: -30px;">
+                        <h5 class="card-title">ITARSI FAIR 2020</h5>
+                        <p class="card-text text-justify">Untuk Apa ITARSI Fair Diadakan? Teknologi terus menerus berkembang seiring berjalannya waktu. Internet of Things (IoT), Big Data, dan Artificial […]
+                        </p>
+                      </div>
+                      <div class="infobox card-img-bottom" style="height: 30px; width: auto; position: inherit; margin-bottom: 10px;">
+                            <img src="Asset/Img/user.svg" style="height: 18px; width: 18px; position: inherit; margin-top: 5px; margin-left: 10px;" >
+                            <p style="color: #FFFFFF; margin-top: -17px; margin-left: 40px; position: inherit;">ITARSI</p>
+                            <p style="color: #FFFFFF; margin-top: -36px; margin-left: 200px; position: inherit;">Read More</p>
+                      </div>
+                    </div>   
                 </div>
-            </div>
-            
-            <div class="pastevent inline-photo show-on-scroll" id="PastEvent2">
-                <img src="Asset/Img/slider3-img.jpg" alt="Event1" style="height: 250px; width: 370px; position: inherit; border-top-left-radius: 2%; border-top-right-radius: 2%; ">
-                <div class="infobox" style="height: 30px; width: 200px; position: inherit;">
-                    <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">December 12, 2017</h6>
+                
+                <div class="inline-photo show-on-scroll col-md-4" style="margin-bottom: 50px;">
+                   <div class="card cardevent">
+                      <img src="Asset/Img/Itarsi%20Fair%20ICT.jpg" class="card-img-top" style="height: 250px; border-top-left-radius: 2%; border-top-right-radius: 2%;">
+                      <div class="infobox card-img-top" style="height: 30px; width: 200px; position: relative; top: -250px;">
+                        <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">December 12, 2017</h6>
+                      </div>
+                      <div class="card-body" style="margin-top: -30px;">
+                        <h5 class="card-title">ITARSI FAIR 2020</h5>
+                        <p class="card-text text-justify">Untuk Apa ITARSI Fair Diadakan? Teknologi terus menerus berkembang seiring berjalannya waktu. Internet of Things (IoT), Big Data, dan Artificial […]
+                        </p>
+                      </div>
+                      <div class="infobox card-img-bottom" style="height: 30px; width: auto; position: inherit; margin-bottom: 10px;">
+                            <img src="Asset/Img/user.svg" style="height: 18px; width: 18px; position: inherit; margin-top: 5px; margin-left: 10px;" >
+                            <p style="color: #FFFFFF; margin-top: -17px; margin-left: 40px; position: inherit;">ITARSI</p>
+                            <p style="color: #FFFFFF; margin-top: -36px; position: inherit; margin-left: 200px;">Read More</p>
+                      </div>
+                    </div>   
                 </div>
-                <h5 class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 270px;">Kemenangan Manis pada Lomba KTI Universitas Bangka Belitung</h5>
-                <p class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 20px;">
-                Taruna Bima beserta 2 orang taruna lainnya merupakan perwakilan Kontingen STMKG dalam lomba karya tulis ilmiah tingkat nasional yang diselenggarakan […]</p>
-                <div class="infobox" style="height: 30px; width: 370px; position: inherit; top: 460px;">
-                    <img src="Asset/Img/user.svg" style="height: 18px; width: 18px; position: inherit; margin-top: 5px; margin-left: 20px;">
-                    <p style="color: #FFFFFF; margin-left: 50px; margin-top: 5px; position: inherit;">ITARSI</p>
-                    <p style="color: #FFFFFF; margin-right: 10px; margin-top: 5px; position: inherit; left: 280px;">Read More</p>
-                </div>
-            </div>
-            
-            <div class="pastevent inline-photo show-on-scroll" id="PastEvent3">
-                <img src="Asset/Img/slider2-img.jpeg" alt="Event1" style="height: 250px; width: 370px; position: inherit; border-top-left-radius: 2%; border-top-right-radius: 2%; ">
-                <div class="infobox" style="height: 30px; width: 200px; position: inherit;">
-                    <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">September 17, 2018</h6>
-                </div>
-                <h5 class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 270px;">Partisipasi Taruna Instrumentasi Dalam KOMURINDO KOMBAT 2017</h5>
-                <p class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 20px;">
-                Kompetisi Muatan Roket Indonesia (KOMURINDO) dan Kompetisi Muatan Balon Atmosfer (KOMBAT) merupakan kompetisi tahunan yang diselenggarakan oleh LAPAN sejak taun […]</p>
-                <div class="infobox" style="height: 30px; width: 370px; position: inherit; top: 460px;">
-                    <img src="Asset/Img/user.svg" style="height: 18px; width: 18px; position: inherit; margin-top: 5px; margin-left: 20px;">
-                    <p style="color: #FFFFFF; margin-left: 50px; margin-top: 5px; position: inherit;">ITARSI</p>
-                    <p style="color: #FFFFFF; margin-right: 10px; margin-top: 5px; position: inherit; left: 280px;">Read More</p>
-                </div>
-            </div>
+
+            </div>    
         </div>
     </div>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         
-    <div class="container-fluid row" id="PastEvent" style="margin: 20px 0 30px">
+    <div class="container-fluid row" id="PastEvent" style="margin: 50px 0 20px;">
         <div class="container">
-            <h4 class="text-center textinfo" id="competitionevent">Competition Event</h4>
-            <div id="linecompetition">
-                <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 2400px; left: 590px;"></div>
-                <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 2400px; left: 650px;"></div>
-                <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 2400px; left: 710px;"></div>
-            </div>
-            <div class="competitionevent inline-photo show-on-scroll" id="CompetitionEvent1">
-                <img src="Asset/Img/Lomba%201.jpg" alt="Event1" style="height: 250px; width: 370px; position: inherit; border-top-left-radius: 2%; border-top-right-radius: 2%; ">
-                <div class="infobox" style="height: 30px; width: 200px; position: inherit;">
-                    <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">Februari 15, 2020</h6>
+            <h4 class="text-center textinfo" style="margin-top: 20px;"><strong>Past Event</strong></h4>
+            <div class="row d-flex justify-content-center" style="margin-top: 40px;">
+                
+                <div class="inline-photo show-on-scroll col-md-4" style="margin-bottom: 50px;">
+                   <div class="card cardevent">
+                      <img src="Asset/Img/slider1-img.jpeg" class="card-img-top" style="height: 250px; border-top-left-radius: 2%; border-top-right-radius: 2%;">
+                      <div class="infobox card-img-top" style="height: 30px; width: 200px; position: relative; top: -250px;">
+                        <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">December 12, 2017</h6>
+                      </div>
+                      <div class="card-body" style="margin-top: -30px;">
+                        <h5 class="card-title">ITARSI FAIR 2018</h5>
+                        <p class="card-text text-justify">Untuk Apa ITARSI Fair Diadakan? Teknologi terus menerus berkembang seiring berjalannya waktu. Internet of Things (IoT), Big Data, dan Artificial […]
+                        </p>
+                      </div>
+                      <div class="infobox card-img-bottom" style="height: 30px; width: auto; position: inherit; margin-bottom: 10px;">
+                            <img src="Asset/Img/user.svg" style="height: 18px; width: 18px; position: inherit; margin-top: 5px; margin-left: 10px;" >
+                            <p style="color: #FFFFFF; margin-top: -17px; margin-left: 40px; position: inherit;">ITARSI</p>
+                            <p style="color: #FFFFFF; margin-top: -36px; margin-left: 200px; position: inherit;">Read More</p>
+                      </div>
+                    </div>   
                 </div>
-                <h5 class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 270px;">Festival of Engineering and Technology 3.0 (Sampoerna University)</h5>
-            </div>
-            
-            <div class="competitionevent inline-photo show-on-scroll" id="CompetitionEvent2">
-                <img src="Asset/Img/Lomba%202.jpg" alt="Event1" style="height: 250px; width: 370px; position: inherit; border-top-left-radius: 2%; border-top-right-radius: 2%; ">
-                <div class="infobox" style="height: 30px; width: 200px; position: inherit;">
-                    <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">Maret 28, 2020</h6>
+                
+                <div class="inline-photo show-on-scroll col-md-4" style="margin-bottom: 50px;">
+                   <div class="card cardevent">
+                      <img src="Asset/Img/slider2-img.jpeg" class="card-img-top" style="height: 250px; border-top-left-radius: 2%; border-top-right-radius: 2%;">
+                      <div class="infobox card-img-top" style="height: 30px; width: 200px; position: relative; top: -250px;">
+                        <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">December 12, 2017</h6>
+                      </div>
+                      <div class="card-body" style="margin-top: -30px;">
+                        <h5 class="card-title">Lomba KTI Bangka Belitung</h5>
+                        <p class="card-text text-justify">Taruna Bima beserta 2 orang taruna lainnya merupakan perwakilan Kontingen STMKG dalam lomba karya tulis ilmiah tingkat nasional yang diselenggarakan […]
+                        </p>
+                      </div>
+                      <div class="infobox card-img-bottom" style="height: 30px; width: auto; position: inherit; margin-bottom: 10px;">
+                            <img src="Asset/Img/user.svg" style="height: 18px; width: 18px; position: inherit; margin-top: 5px; margin-left: 10px;" >
+                            <p style="color: #FFFFFF; margin-top: -17px; margin-left: 40px; position: inherit;">ITARSI</p>
+                            <p style="color: #FFFFFF; margin-top: -36px; margin-left: 200px; position: inherit;">Read More</p>
+                      </div>
+                    </div>   
                 </div>
-                <h5 class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 270px;">National Concrete Competition (UMP)</h5>
-            </div>
-            
-            <div class="competitionevent inline-photo show-on-scroll" id="CompetitionEvent3">
-                <img src="Asset/Img/Lomba%203.jpg" alt="Event1" style="height: 250px; width: 370px; position: inherit; border-top-left-radius: 2%; border-top-right-radius: 2%; ">
-                <div class="infobox" style="height: 30px; width: 200px; position: inherit;">
-                    <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">Februari 23, 2020</h6>
+                
+                <div class="inline-photo show-on-scroll col-md-4" style="margin-bottom: 50px;">
+                   <div class="card cardevent">
+                      <img src="Asset/Img/slider3-img.jpg" class="card-img-top" style="height: 250px; border-top-left-radius: 2%; border-top-right-radius: 2%;">
+                      <div class="infobox card-img-top" style="height: 30px; width: 200px; position: relative; top: -250px;">
+                        <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">December 12, 2017</h6>
+                      </div>
+                      <div class="card-body" style="margin-top: -30px;">
+                        <h5 class="card-title">KOMURINDO KOMBAT 2017</h5>
+                        <p class="card-text text-justify">Kompetisi Muatan Roket Indonesia (KOMURINDO) dan Kompetisi Muatan Balon Atmosfer (KOMBAT) merupakan kompetisi tahunan […]
+                        </p>
+                      </div>
+                      <div class="infobox card-img-bottom" style="height: 30px; width: auto; position: inherit; margin-bottom: 10px;">
+                            <img src="Asset/Img/user.svg" style="height: 18px; width: 18px; position: inherit; margin-top: 5px; margin-left: 10px;" >
+                            <p style="color: #FFFFFF; margin-top: -17px; margin-left: 40px; position: inherit;">ITARSI</p>
+                            <p style="color: #FFFFFF; margin-top: -36px; position: inherit; margin-left: 200px;">Read More</p>
+                      </div>
+                    </div>   
                 </div>
-                <h5 class="text-justify" style="margin-left: 15px; margin-right: 20px; margin-top: 270px;">Cathodic paper competition (ITS)</h5>
-            </div>
+            </div>    
         </div>
-        <div class="container" style="margin-top: 500px;">
+    </div>
+    
+    <div class="container-fluid row" id="CompetitionEvent" style="margin: 50px 0 20px;">
+        <div class="container">
+            <h4 class="text-center textinfo" style="margin-top: 20px;"><strong>Competition Event</strong></h4>
+            <div class="row d-flex justify-content-center" style="margin-top: 40px;">
+                
+                <div class="inline-photo show-on-scroll col-md-4" style="margin-bottom: 50px;">
+                   <div class="card cardevent">
+                      <img src="Asset/Img/slider1-img.jpeg" class="card-img-top" style="height: 250px; border-top-left-radius: 2%; border-top-right-radius: 2%;">
+                      <div class="infobox card-img-top" style="height: 30px; width: 200px; position: relative; top: -250px;">
+                        <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">Februari 15, 2020</h6>
+                      </div>
+                      <div class="card-body" style="margin-top: -30px;">
+                        <h5 class="card-title text-justify">Festival of Engineering and Technology 3.0 (Sampoe...</h5>
+                      </div>
+                    </div>   
+                </div>   
+                
+                <div class="inline-photo show-on-scroll col-md-4" style="margin-bottom: 50px;">
+                   <div class="card cardevent">
+                      <img src="Asset/Img/slider1-img.jpeg" class="card-img-top" style="height: 250px; border-top-left-radius: 2%; border-top-right-radius: 2%;">
+                      <div class="infobox card-img-top" style="height: 30px; width: 200px; position: relative; top: -250px;">
+                        <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">Maret 28, 2020</h6>
+                      </div>
+                      <div class="card-body" style="margin-top: -30px;">
+                        <h5 class="card-title text-justify">National Concrete Competition (UMP)</h5>
+                      </div>
+                    </div>   
+                </div>
+                
+                <div class="inline-photo show-on-scroll col-md-4" style="margin-bottom: 50px;">
+                   <div class="card cardevent">
+                      <img src="Asset/Img/slider1-img.jpeg" class="card-img-top" style="height: 250px; border-top-left-radius: 2%; border-top-right-radius: 2%;">
+                      <div class="infobox card-img-top" style="height: 30px; width: 200px; position: relative; top: -250px;">
+                        <h6 id="tanggal" style="color: #FFFFFF; margin-left: 5px; margin-top: 5px;">Februari 23, 2020</h6>
+                      </div>
+                      <div class="card-body" style="margin-top: -30px;">
+                        <h5 class="card-title text-justify">Cathodic paper competition (ITS)</h5>
+                      </div>
+                    </div>   
+                </div> 
+                
+            </div>
+        </div> 
+    </div>
+        
+    <div class="container-fluid row" id="TentangItarsi" style="margin: 60px 0 30px">
+        
+        <div class="container">
         <h4 class="text-center textinfo" id="tentangitarsi">Tentang ITARSI</h4>
-            <div id="linetentangitarsi">
-                <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 2935px; left: 590px;"></div>
-                <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 2935px; left: 650px;"></div>
-                <div class="lineinfo" style="width: 50px; height: 3px; position: absolute; top: 2935px; left: 710px;"></div>
-            </div>
+            
 			<p class="text-justify tentangitarsitext" style="margin-top: 50px;">
 				Ikatan Taruna Geofisika Sekolah Tinggi Meteorologi Klimatologi dan Geofisika yang seterusnya disebut ITARSI-STMKG merupakan suatu organisasi yang berada langsung di bawah bagian Administrasi Akademik, Umum, Ketarunaan dan Kerjasama Pendidikan dengan pengarah Kepala Program Studi Instrumentasi. ITARSI-STMKG merupakan wadah bagi taruna-taruni instrumentasi STMKG untuk mengembangkan pengetahuan dan kemampuan akademik di bidang instrumentasi meteorologi, klimatologi dan geofisika serta kemampuan lain dalam mendukung prestasi kerja di lingkungan Badan Meteorologi Klimatologi dan Geofisika (BMKG).
 			</p>
@@ -1019,6 +771,10 @@
 			Copyright &copy; ITARSI FAIR 2020 (MJ INSTRUMENTASI 6A)
 		</div>
 	</footer>
-    <script src="javascripts/show-on-scroll.js"></script>
+    <script src="javascripts/show-on-scroll.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"></script>
 </body>
 </html>

@@ -4,15 +4,19 @@
 	<meta charset="UTF-8">
 	<!-- to add title on your website -->
 	<title>FILOSOFI LOGO | ITARSI STMKG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- to add logo on your title -->
 	<link rel="icon" href="Asset/Img/title3-img.ico">
 	<!-- to create link to bootstrap and jscript -->
-	<link rel="stylesheet" href="Asset/bootstrap/css/bootstrap.min.css">
-	<script src="Asset/jquery/popper.js"></script>
-	<script src="Asset/jquery/jquery.js"></script>
-	<script src="Asset/bootstrap/js/bootstrap.min.js"></script>
-    <link href="stylesheets/slide-in.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="asset/bootstrap/css/bootstrap.min.css">
+    <script src="asset/bootstrap/js/bootstrap.min.js"></script>
+	<script src="asset/jquery/Jquery.js"></script>
+	<script src="asset/jquery/popper.js"></script>
+	<script src="assets/js/jquery-1.10.2.js"></script>
+	<script src="assets/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="stylesheets/slide-in.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Google+Sans" rel="stylesheet">
 	<!-- to make fully responsive images -->
@@ -128,6 +132,10 @@
           background-color: #6000AF;
         }
         
+        [data-theme="dark"] nav .navbar-nav li a{
+            color: white !important;
+        }
+        
         [data-theme="dark"] .navitem{
             color: #FFFFFF;
         }
@@ -198,21 +206,22 @@
             color: #E4E4F0;
         }
         
-        #navbarCollapse{
-            position: fixed;
-            right: 100px;
-            top: 15px;
-            font-size: 15px;
-        }
-        
         .navbar{
             background-color: #E4EAEA;  
             box-shadow: 1px 1px 1px 1px #000000;
             font-family: "Google Sans";
         }
         
+        nav .navbar-nav li a{
+            color: #000000 !important;
+        }
+        
         .navitem{
             color: #000000;
+        }
+        
+        #dark-mode{
+            top: 7px;
         }
         
         .darklabel{
@@ -239,12 +248,23 @@
             display: block;
         }
         
-        #logo{
+        .logo{
             background-color: #E4EAEA; 
             width: 240px;
             height: 50px;
             border-radius: 2%; 
             margin-top: -5px;
+        }
+        
+        .header-logo{
+            width: 15px; 
+            position: relative; 
+            left: -3px; 
+            top: -2px;
+        }
+        
+        .logo-img{
+            height: 43px;
         }
         
         .backgroundlogo{
@@ -258,24 +278,20 @@
         }
         
         #title{
-            position: relative;
-            width: 1355px;
-            height: 80px;
             margin-top: 100px;
             background-color: #D1D1D1;
         }
         
         .judul{
-            text-align: center;
             color: #000000;
-            position: relative;
-            top: 15px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
         
         .arrow{
             width: 200px;
             height: 3px;
-            background-color: #000A80;
+            background-color: #3D3D3D;
         }
         
         .button{
@@ -314,106 +330,113 @@
         p{
             color: #000000;
         }
+        @media (max-width: 920px) {
+            .backgroundlogo{
+                margin-left: -4px;
+            }
+            .dropdown-menu{
+                background-color: #E4EAEA;
+                border-left-style: none;
+                border-right-style: none;
+            }
+            [data-theme="dark"] .dropdown-menu{
+                background-color: #6000AF;
+            }
+        }
         
 	</style>
 </head>
 <body>
 	<!-- header begin -->
 	<header>
-		<nav class="navbar navbar-expand-md fixed-top" id="header">
-			<!-- icon header -->
-			<a href="index.html" class="navbar-brand">
-                <div id="logo">
-                    <img src="Asset/img/header-img.png" alt="logo" style="height: 43px; left: : 100px; margin-left: 10px; margin-top: 3px;">
-                </div> 
-				
-                
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<!-- menu begin -->
-			<div class="dropdown" id="navbarCollapse">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-                        <div class="backgroundlogo"></div>
-						<a href="index.html" class="nav-link navitem" style="position: inherit;">
-							<img src="Asset/Img/home.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Home
-						</a>
-					</li>
-					<li class="nav-item dropdown">
-                        <div class="backgroundlogo"></div>
-                        <a class="nav-link navitem dropdown-toggle" href="profil.html" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-                            <img src="Asset/Img/user.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Profil
-                        </a><span class="caret"></span>
-                        <ul class="dropdown-menu" id="dropdownprofil" aria-labelledby="dropdownMenuButton" style="margin-left: 0px;">
-                            <li><a class="dropdown-item" href="profil.html">About Us</a></li>
-                            <li><a class="dropdown-item" href="filosofi%20logo.html">Filosofi Logo</a></li>
-                            <li><a class="dropdown-item" href="struktur-organisasi.html">Struktur Organisasi</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <div class="backgroundlogo"></div>
-						<a class="nav-link navitem dropdown-toggle" href="profil.html" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-				            <img src="Asset/Img/calendar.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Agenda
-						</a><span class="caret"></span>
-                        <ul class="dropdown-menu" id="dropdownagenda" aria-labelledby="dropdownMenuButton" style="margin-left: 0px;">
-                            <li><a class="dropdown-item" href="mainevent.html">Main Event</a></li>
-                            <li><a class="dropdown-item" href="pastevent.html">Past Event</a></li>
-                            <li><a class="dropdown-item" href="#">Open Discussion</a>
-                            </li>
-                        </ul>
-                        
-					</li>
-                    <li class="nav-item">
-                        <div class="backgroundlogo"></div>
-						<a href="tutorial.html" class="nav-link navitem">
-				            <img src="Asset/Img/cpu.svg" style="width: 15px; position: relative; left: -3px; top: -2px;">Tutorial
-						</a>
-					</li>
-					<li class="nav-item">
-                        <div class="backgroundlogo"></div>
-						<a href="contact.html" class="nav-link navitem">
-				            <img src="Asset/Img/phone.svg" style="width: 15px; position: relative; left: -4px; top: -2px;">Contact
-						</a>
-					</li>
-				</ul>
-                
-                <div class="nav-link" style="position: absolute; margin-left: 405px;">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" >
+            <div class="container">
+                <a class="navbar-brand" href="Index.html" style="position: relative; left: -40px;">
+                    <div class="logo">
+                        <img class="logo-img" src="Asset/img/header-img.png" alt="logo" style="margin-left: 10px; margin-top: 3px;">
+                    </div> 
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+         
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav ml-auto text-white">
+                        <li class="nav-item">
+                            <div class="backgroundlogo"></div>    
+                            <a class="nav-link" href="index.html">
+                                <img class="header-logo" src="Asset/Img/home.svg">Home
+                            </a>  
+                        </li>  
 
-                  <div class="custom-control custom-switch" style="top: -38px;">
-                    <input type="checkbox" class="custom-control-input" id="darkSwitch">
-                    <label class="custom-control-label darklabel" style="font-family: Google Sans;" for="darkSwitch">Dark</label>
-                  </div>
+                        <li class="nav-item dropdown">
+                            <div class="backgroundlogo"></div>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProfil" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="header-logo" src="Asset/Img/user.svg">Profil
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownProfil">
+                                <a class="dropdown-item" href="profil.html">About Us</a>
+                                <a class="dropdown-item" href="filosofi%20logo.html">Filosofi Logo</a>
+                                <a class="dropdown-item" href="struktur-organisasi.html">Pengurus Organisasi</a>  
+                            </div>
+                        </li>
 
-                  <script src="Asset/Bootstrap/js/dark-mode-switch.min.js"></script>
+                        <li class="nav-item dropdown">
+                            <div class="backgroundlogo"></div>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAgenda" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="header-logo" src="Asset/Img/calendar.svg">Agenda
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownAgenda">
+                                <a class="dropdown-item" href="mainevent.html">Main Event</a>
+                                <a class="dropdown-item" href="pastevent.html">Past Event</a>
+                                <a class="dropdown-item" href="open-discussion.html">Open Discussion</a>
+                            </div>
+                        </li>
 
+                        <li class="nav-item">
+                            <div class="backgroundlogo"></div>
+                            <a class="nav-link" href="tutorial.html">
+                                <img class="header-logo" src="Asset/Img/cpu.svg">Tutorial
+                            </a>  
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="backgroundlogo"></div>
+                            <a class="nav-link" href="contact.html">
+                                <img class="header-logo" src="Asset/Img/phone.svg">Contact
+                            </a>  
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="custom-control custom-switch" id="dark-mode">
+                                <input type="checkbox" class="custom-control-input" id="darkSwitch">
+                                <label class="custom-control-label darklabel" style="font-family: Google Sans;" for="darkSwitch">Dark</label>
+                            </div>
+                            <script src="Asset/Bootstrap/js/dark-mode-switch.min.js"></script>
+                        </li> 
+                    </ul>
                 </div>
-				<!-- menu end -->
-				<!-- search bar begin -->
-			     
+                
             </div>
-		</nav>
-	</header>
+        </nav>  
+    </header>
     <!-- header end -->
-    <div id="title">
+    <div class="container-fluid d-flex justify-content-center" id="title">
         <h1 class="judul">FILOSOFI LOGO</h1>
     </div>
-	<div class="container-fluid row" style="margin: 10px 0 10px">
+	<div class="container-fluid row" style="margin: 10px 0 10px; margin-bottom: 250px;">
 		<!-- about itarsi -->
 		<div class="container">
-            <div style="width: 300px; height: 300px; border-radius: 50%; background-color: #C3C7CD; position: relative; left: 410px; top: 100px; margin-top: 30px;">
+            <div style="width: 300px; height: 300px; border-radius: 50%; background-color: #C3C7CD; position: absolute; left: 530px; top: 320px;">
                 <img src="Asset/Img/header-icon.png" style="height: 180px; margin-top: 70px; margin-left: 10px;">
             </div>
             
             <div class="gambar-ic">
-                <div class="arrow" style="position: absolute; top: 340px; right: 380px; transform: rotate(-45deg);"></div>
-                <button data-toggle="collapse" class="button inline-photo-down show-on-scroll" style="position: absolute; right: 300px; top: 240px;" data-target="#gambar-ic">Gambar IC</button>
-                <div id="gambar-ic" class="collapse definisi-box text-justify" style="position: absolute; right: 50px; top: 280px; z-index: 2;">
+                <div class="arrow" style="position: absolute; top: 340px; left: 770px; transform: rotate(-45deg);"></div>
+                <button data-toggle="collapse" class="button inline-photo-down show-on-scroll" style="position: absolute; left: 950px; top: 240px;" data-target="#gambar-ic">Gambar IC</button>
+                <div id="gambar-ic" class="collapse definisi-box text-justify" style="position: absolute; left: 850px; top: 280px; z-index: 2;">
                     <p class="definisi">Integrated Circuit atau disingkat dengan IC adalah Komponen Elektronika Aktif yang terdiri dari gabungan ratusan, ribuan bahkan jutaan Transistor, Dioda, Resistor dan Kapasitor yang diintegrasikan menjadi suatu Rangkaian Elektronika dalam sebuah kemasan kecil. Maksudnya adalah ITARSI layaknya IC yang mewadahi, mengembangkan dan menyalurkan berbagai kemampuan di jurusan Instrumentasi (design software, elektronika, programming, dll)</p>
-                </div>
-                
+                </div>   
             </div>
             
             <div class="jalur-pcb">
@@ -422,13 +445,12 @@
                 <div id="jalur-pcb" class="collapse definisi-box text-justify" style="position: absolute; left: 20px; top: 300px;">
                     <p class="definisi">maksudnya adalah ITARSI mampu bersinergi dengan bidang/jurusan lain di STMKG seperti Meteorologi (merah), Klimatologi (hijau), Geofisika (biru tua), dan Instrumentasi (orange) serta mampu menjalin kerjasama dengan kampus lain (biru muda=langit luas, yaitu menjalin kerjasama yang tidak terbatas)</p>
                 </div>
-                
             </div>
             
             <div class="jalur-pcb-dalam">
-                <div class="arrow" style="position: absolute; top: 460px; right: 400px; transform: rotate(0deg); width: 200px;"></div>
-                <button data-toggle="collapse" class="button inline-photo-left show-on-scroll" style="position: absolute; right: 240px; top: 445px;" data-target="#jalur-pcb-dalam">Jalur PCB Dalam</button>
-                <div id="jalur-pcb-dalam" class="collapse definisi-box text-justify" style="position: absolute; right: 30px; top: 490px;">
+                <div class="arrow" style="position: absolute; top: 460px; left: 750px; transform: rotate(0deg); width: 200px;"></div>
+                <button data-toggle="collapse" class="button inline-photo-left show-on-scroll" style="position: absolute; left: 960px; top: 445px;" data-target="#jalur-pcb-dalam">Jalur PCB Dalam</button>
+                <div id="jalur-pcb-dalam" class="collapse definisi-box text-justify" style="position: absolute; left: 850px; top: 490px;">
                     <p class="definisi">maksudnya ITARSI memiliki kesolidan di dalam organisasinya dan tekad teguh untuk senantiasa bekerjasama dan bekerja keras untuk kemajuan ITARSI secara khusus dan STMKG serta BMKG secara umumnya</p>
                 </div>
                 
@@ -445,8 +467,8 @@
             
             <div class="5-kaki-ic">
                 <div class="arrow" style="position: absolute; top: 590px; left: 630px; transform: rotate(100deg); width: 150px;"></div>
-                <button data-toggle="collapse" class="button inline-photo show-on-scroll" style="position: absolute; left: 640px; top: 670px;" data-target="#5-kaki-ic">5 Kaki IC</button>
-                <div id="5-kaki-ic" class="collapse definisi-box-kaki-ic text-justify" style="position: absolute; left: 280px; top: 710px;">
+                <button data-toggle="collapse" class="button inline-photo show-on-scroll" style="position: absolute; left: 640px; top: 670px;" data-target="#lima-kaki-ic">5 Kaki IC</button>
+                <div id="lima-kaki-ic" class="collapse definisi-box-kaki-ic text-justify" style="position: absolute; left: 280px; top: 710px;">
                     <p class="definisi">Dalam melaksanakan kegiatannya ITARSI senantiasa mengacu pada<br>
                         – 5 kaki Bagian atas : 5 sila Pancasila (wujud Bakti pada Negara)<br>
                         – 5 kaki bagian samping kanan : 5 bidang BMKG yaitu Meteorologi, Maritim, Klimatologi, Geofisika &nbsp;&nbsp;&nbsp;dan INSKAL (wujud bakti pada BMKG)<br>
@@ -454,7 +476,6 @@
                 </div>
                 
             </div>
-            
         </div>
 	</div>
     <script src="javascripts/show-on-scroll.js"></script>
@@ -479,6 +500,10 @@
 			Copyright &copy; ITARSI FAIR 2020 (MJ INSTRUMENTASI 6A)
 		</div>
 	</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"></script>
 	<!-- footer end -->
 </body>
 </html>
